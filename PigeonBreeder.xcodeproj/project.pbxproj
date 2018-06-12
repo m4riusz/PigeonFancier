@@ -12,9 +12,11 @@
 		6F24760320D0419700C2B409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F24760120D0419700C2B409 /* Main.storyboard */; };
 		6F24760520D0419800C2B409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F24760420D0419800C2B409 /* Assets.xcassets */; };
 		6F24760820D0419800C2B409 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F24760620D0419800C2B409 /* LaunchScreen.storyboard */; };
+		7AF63A0B96EF2927F8C3DA75 /* Pods_PigeonBreeder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CD384C8D1B7DE5F1502821 /* Pods_PigeonBreeder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C11E1B2D3485F543E85994E /* Pods-PigeonBreeder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PigeonBreeder.release.xcconfig"; path = "Pods/Target Support Files/Pods-PigeonBreeder/Pods-PigeonBreeder.release.xcconfig"; sourceTree = "<group>"; };
 		6F2475FA20D0419700C2B409 /* PigeonBreeder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PigeonBreeder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F2475FD20D0419700C2B409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F2475FF20D0419700C2B409 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		6F24760420D0419800C2B409 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F24760720D0419800C2B409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F24760920D0419800C2B409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		777E3C4FDA84E6538CC28429 /* Pods-PigeonBreeder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PigeonBreeder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PigeonBreeder/Pods-PigeonBreeder.debug.xcconfig"; sourceTree = "<group>"; };
+		E3CD384C8D1B7DE5F1502821 /* Pods_PigeonBreeder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PigeonBreeder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AF63A0B96EF2927F8C3DA75 /* Pods_PigeonBreeder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				6F2475FC20D0419700C2B409 /* PigeonBreeder */,
 				6F2475FB20D0419700C2B409 /* Products */,
+				ABC8BE92AC76FDCF696EAC16 /* Pods */,
+				B7378968439E24ABECCD958D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = PigeonBreeder;
 			sourceTree = "<group>";
 		};
+		ABC8BE92AC76FDCF696EAC16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				777E3C4FDA84E6538CC28429 /* Pods-PigeonBreeder.debug.xcconfig */,
+				0C11E1B2D3485F543E85994E /* Pods-PigeonBreeder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B7378968439E24ABECCD958D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3CD384C8D1B7DE5F1502821 /* Pods_PigeonBreeder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F24760C20D0419900C2B409 /* Build configuration list for PBXNativeTarget "PigeonBreeder" */;
 			buildPhases = (
+				0FB19AC4BCF5C7EF201A2355 /* [CP] Check Pods Manifest.lock */,
 				6F2475F620D0419700C2B409 /* Sources */,
 				6F2475F720D0419700C2B409 /* Frameworks */,
 				6F2475F820D0419700C2B409 /* Resources */,
@@ -129,6 +154,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FB19AC4BCF5C7EF201A2355 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PigeonBreeder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F2475F620D0419700C2B409 /* Sources */ = {
@@ -278,6 +324,7 @@
 		};
 		6F24760D20D0419900C2B409 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 777E3C4FDA84E6538CC28429 /* Pods-PigeonBreeder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +343,7 @@
 		};
 		6F24760E20D0419900C2B409 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C11E1B2D3485F543E85994E /* Pods-PigeonBreeder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
