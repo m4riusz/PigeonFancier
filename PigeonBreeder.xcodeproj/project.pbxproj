@@ -8,10 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		6F2475FE20D0419700C2B409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2475FD20D0419700C2B409 /* AppDelegate.swift */; };
-		6F24760020D0419700C2B409 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2475FF20D0419700C2B409 /* ViewController.swift */; };
 		6F24760320D0419700C2B409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F24760120D0419700C2B409 /* Main.storyboard */; };
 		6F24760520D0419800C2B409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F24760420D0419800C2B409 /* Assets.xcassets */; };
 		6F24760820D0419800C2B409 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F24760620D0419800C2B409 /* LaunchScreen.storyboard */; };
+		6FF9159320D04723000F2D40 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF9159220D04723000F2D40 /* Label.swift */; };
+		6FF9159620D0474E000F2D40 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF9159520D0474E000F2D40 /* Button.swift */; };
+		6FF9159B20D047C3000F2D40 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF9159A20D047C3000F2D40 /* BaseNavigationViewController.swift */; };
+		6FF9159E20D047EE000F2D40 /* Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF9159D20D047EE000F2D40 /* Nib.swift */; };
+		6FF915A120D04821000F2D40 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF915A020D04821000F2D40 /* Const.swift */; };
+		6FF915A420D04875000F2D40 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF915A320D04875000F2D40 /* UIColor+RGB.swift */; };
+		6FF915A820D04A31000F2D40 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF915A720D04A31000F2D40 /* MainTabBarViewController.swift */; };
+		6FF915B020D04AD6000F2D40 /* BaseScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF915AF20D04AD5000F2D40 /* BaseScreenViewController.swift */; };
+		6FF915B620D04B6F000F2D40 /* BaseAboutNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF915B520D04B6F000F2D40 /* BaseAboutNavigationViewController.swift */; };
+		6FF915B920D04BD4000F2D40 /* BaseAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF915B720D04BD4000F2D40 /* BaseAboutViewController.swift */; };
+		6FF915BC20D04C23000F2D40 /* BaseDepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF915BB20D04C23000F2D40 /* BaseDepartmentViewController.swift */; };
+		6FF915BE20D04C70000F2D40 /* BaseDepartmentNavigatationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF915BD20D04C70000F2D40 /* BaseDepartmentNavigatationViewController.swift */; };
+		6FF915C320D04D12000F2D40 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF915C120D04D12000F2D40 /* AboutViewController.swift */; };
+		6FF915C420D04D12000F2D40 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF915C220D04D12000F2D40 /* AboutViewController.xib */; };
+		6FF915C820D04F6D000F2D40 /* DepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF915C620D04F6D000F2D40 /* DepartmentViewController.swift */; };
+		6FF915C920D04F6D000F2D40 /* DepartmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF915C720D04F6D000F2D40 /* DepartmentViewController.xib */; };
+		6FF915CC20D04FD8000F2D40 /* BasePigeonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF915CB20D04FD8000F2D40 /* BasePigeonViewController.swift */; };
+		6FF915CE20D05017000F2D40 /* BasePigeonNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF915CD20D05017000F2D40 /* BasePigeonNavigationViewController.swift */; };
+		6FF915D220D05042000F2D40 /* PigeonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF915D020D05042000F2D40 /* PigeonViewController.swift */; };
+		6FF915D320D05042000F2D40 /* PigeonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF915D120D05042000F2D40 /* PigeonViewController.xib */; };
+		6FF915DC20D051E4000F2D40 /* ic_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FF915D620D051E4000F2D40 /* ic_info@2x.png */; };
+		6FF915DD20D051E4000F2D40 /* ic_info_outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FF915D720D051E4000F2D40 /* ic_info_outline.png */; };
+		6FF915DE20D051E4000F2D40 /* ic_info_outline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FF915D820D051E4000F2D40 /* ic_info_outline@2x.png */; };
+		6FF915DF20D051E4000F2D40 /* ic_info.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FF915D920D051E4000F2D40 /* ic_info.png */; };
+		6FF915E020D051E4000F2D40 /* ic_info@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FF915DA20D051E4000F2D40 /* ic_info@3x.png */; };
+		6FF915E120D051E4000F2D40 /* ic_info_outline@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FF915DB20D051E4000F2D40 /* ic_info_outline@3x.png */; };
 		7AF63A0B96EF2927F8C3DA75 /* Pods_PigeonBreeder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CD384C8D1B7DE5F1502821 /* Pods_PigeonBreeder.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,11 +44,36 @@
 		0C11E1B2D3485F543E85994E /* Pods-PigeonBreeder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PigeonBreeder.release.xcconfig"; path = "Pods/Target Support Files/Pods-PigeonBreeder/Pods-PigeonBreeder.release.xcconfig"; sourceTree = "<group>"; };
 		6F2475FA20D0419700C2B409 /* PigeonBreeder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PigeonBreeder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F2475FD20D0419700C2B409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6F2475FF20D0419700C2B409 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6F24760220D0419700C2B409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F24760420D0419800C2B409 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F24760720D0419800C2B409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F24760920D0419800C2B409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FF9159220D04723000F2D40 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		6FF9159520D0474E000F2D40 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		6FF9159A20D047C3000F2D40 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		6FF9159D20D047EE000F2D40 /* Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nib.swift; sourceTree = "<group>"; };
+		6FF915A020D04821000F2D40 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		6FF915A320D04875000F2D40 /* UIColor+RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
+		6FF915A720D04A31000F2D40 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		6FF915AF20D04AD5000F2D40 /* BaseScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseScreenViewController.swift; sourceTree = "<group>"; };
+		6FF915B520D04B6F000F2D40 /* BaseAboutNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAboutNavigationViewController.swift; sourceTree = "<group>"; };
+		6FF915B720D04BD4000F2D40 /* BaseAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAboutViewController.swift; sourceTree = "<group>"; };
+		6FF915BB20D04C23000F2D40 /* BaseDepartmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDepartmentViewController.swift; sourceTree = "<group>"; };
+		6FF915BD20D04C70000F2D40 /* BaseDepartmentNavigatationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDepartmentNavigatationViewController.swift; sourceTree = "<group>"; };
+		6FF915C120D04D12000F2D40 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		6FF915C220D04D12000F2D40 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		6FF915C620D04F6D000F2D40 /* DepartmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentViewController.swift; sourceTree = "<group>"; };
+		6FF915C720D04F6D000F2D40 /* DepartmentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentViewController.xib; sourceTree = "<group>"; };
+		6FF915CB20D04FD8000F2D40 /* BasePigeonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePigeonViewController.swift; sourceTree = "<group>"; };
+		6FF915CD20D05017000F2D40 /* BasePigeonNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePigeonNavigationViewController.swift; sourceTree = "<group>"; };
+		6FF915D020D05042000F2D40 /* PigeonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PigeonViewController.swift; sourceTree = "<group>"; };
+		6FF915D120D05042000F2D40 /* PigeonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PigeonViewController.xib; sourceTree = "<group>"; };
+		6FF915D620D051E4000F2D40 /* ic_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_info@2x.png"; sourceTree = "<group>"; };
+		6FF915D720D051E4000F2D40 /* ic_info_outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_info_outline.png; sourceTree = "<group>"; };
+		6FF915D820D051E4000F2D40 /* ic_info_outline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_info_outline@2x.png"; sourceTree = "<group>"; };
+		6FF915D920D051E4000F2D40 /* ic_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_info.png; sourceTree = "<group>"; };
+		6FF915DA20D051E4000F2D40 /* ic_info@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_info@3x.png"; sourceTree = "<group>"; };
+		6FF915DB20D051E4000F2D40 /* ic_info_outline@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_info_outline@3x.png"; sourceTree = "<group>"; };
 		777E3C4FDA84E6538CC28429 /* Pods-PigeonBreeder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PigeonBreeder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PigeonBreeder/Pods-PigeonBreeder.debug.xcconfig"; sourceTree = "<group>"; };
 		E3CD384C8D1B7DE5F1502821 /* Pods_PigeonBreeder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PigeonBreeder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -61,14 +111,183 @@
 		6F2475FC20D0419700C2B409 /* PigeonBreeder */ = {
 			isa = PBXGroup;
 			children = (
+				6FF9159020D046FC000F2D40 /* Controls */,
+				6FF9158F20D04663000F2D40 /* Common */,
+				6FF915A220D04853000F2D40 /* Extenstions */,
+				6FF915A520D048AB000F2D40 /* Screens */,
+				6FF9159F20D0480B000F2D40 /* Util */,
+				6FF915D420D051B6000F2D40 /* Resources */,
 				6F2475FD20D0419700C2B409 /* AppDelegate.swift */,
-				6F2475FF20D0419700C2B409 /* ViewController.swift */,
 				6F24760120D0419700C2B409 /* Main.storyboard */,
 				6F24760420D0419800C2B409 /* Assets.xcassets */,
 				6F24760620D0419800C2B409 /* LaunchScreen.storyboard */,
 				6F24760920D0419800C2B409 /* Info.plist */,
 			);
 			path = PigeonBreeder;
+			sourceTree = "<group>";
+		};
+		6FF9158F20D04663000F2D40 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6FF9159720D0478A000F2D40 /* Base */,
+				6FF9159C20D047D1000F2D40 /* Nib */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6FF9159020D046FC000F2D40 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				6FF9159420D04735000F2D40 /* Button */,
+				6FF9159120D04707000F2D40 /* Label */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		6FF9159120D04707000F2D40 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				6FF9159220D04723000F2D40 /* Label.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		6FF9159420D04735000F2D40 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				6FF9159520D0474E000F2D40 /* Button.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		6FF9159720D0478A000F2D40 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6FF915AF20D04AD5000F2D40 /* BaseScreenViewController.swift */,
+				6FF9159A20D047C3000F2D40 /* BaseNavigationViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6FF9159C20D047D1000F2D40 /* Nib */ = {
+			isa = PBXGroup;
+			children = (
+				6FF9159D20D047EE000F2D40 /* Nib.swift */,
+			);
+			path = Nib;
+			sourceTree = "<group>";
+		};
+		6FF9159F20D0480B000F2D40 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6FF915A020D04821000F2D40 /* Const.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		6FF915A220D04853000F2D40 /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				6FF915A320D04875000F2D40 /* UIColor+RGB.swift */,
+			);
+			path = Extenstions;
+			sourceTree = "<group>";
+		};
+		6FF915A520D048AB000F2D40 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				6FF915A920D04A44000F2D40 /* About */,
+				6FF915AA20D04A52000F2D40 /* Departments */,
+				6FF915CA20D04FAC000F2D40 /* Pigeons */,
+				6FF915A620D04A00000F2D40 /* Main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		6FF915A620D04A00000F2D40 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6FF915A720D04A31000F2D40 /* MainTabBarViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6FF915A920D04A44000F2D40 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				6FF915BF20D04CDF000F2D40 /* StartScreen */,
+				6FF915B720D04BD4000F2D40 /* BaseAboutViewController.swift */,
+				6FF915B520D04B6F000F2D40 /* BaseAboutNavigationViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		6FF915AA20D04A52000F2D40 /* Departments */ = {
+			isa = PBXGroup;
+			children = (
+				6FF915C520D04F42000F2D40 /* StartScreen */,
+				6FF915BB20D04C23000F2D40 /* BaseDepartmentViewController.swift */,
+				6FF915BD20D04C70000F2D40 /* BaseDepartmentNavigatationViewController.swift */,
+			);
+			path = Departments;
+			sourceTree = "<group>";
+		};
+		6FF915BF20D04CDF000F2D40 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6FF915C120D04D12000F2D40 /* AboutViewController.swift */,
+				6FF915C220D04D12000F2D40 /* AboutViewController.xib */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		6FF915C520D04F42000F2D40 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6FF915C620D04F6D000F2D40 /* DepartmentViewController.swift */,
+				6FF915C720D04F6D000F2D40 /* DepartmentViewController.xib */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		6FF915CA20D04FAC000F2D40 /* Pigeons */ = {
+			isa = PBXGroup;
+			children = (
+				6FF915CF20D05021000F2D40 /* StartScreen */,
+				6FF915CB20D04FD8000F2D40 /* BasePigeonViewController.swift */,
+				6FF915CD20D05017000F2D40 /* BasePigeonNavigationViewController.swift */,
+			);
+			path = Pigeons;
+			sourceTree = "<group>";
+		};
+		6FF915CF20D05021000F2D40 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6FF915D020D05042000F2D40 /* PigeonViewController.swift */,
+				6FF915D120D05042000F2D40 /* PigeonViewController.xib */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		6FF915D420D051B6000F2D40 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6FF915D520D051CC000F2D40 /* Main */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6FF915D520D051CC000F2D40 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6FF915D720D051E4000F2D40 /* ic_info_outline.png */,
+				6FF915D820D051E4000F2D40 /* ic_info_outline@2x.png */,
+				6FF915DB20D051E4000F2D40 /* ic_info_outline@3x.png */,
+				6FF915D920D051E4000F2D40 /* ic_info.png */,
+				6FF915D620D051E4000F2D40 /* ic_info@2x.png */,
+				6FF915DA20D051E4000F2D40 /* ic_info@3x.png */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		ABC8BE92AC76FDCF696EAC16 /* Pods */ = {
@@ -147,8 +366,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FF915C920D04F6D000F2D40 /* DepartmentViewController.xib in Resources */,
 				6F24760820D0419800C2B409 /* LaunchScreen.storyboard in Resources */,
+				6FF915DE20D051E4000F2D40 /* ic_info_outline@2x.png in Resources */,
 				6F24760520D0419800C2B409 /* Assets.xcassets in Resources */,
+				6FF915C420D04D12000F2D40 /* AboutViewController.xib in Resources */,
+				6FF915E020D051E4000F2D40 /* ic_info@3x.png in Resources */,
+				6FF915E120D051E4000F2D40 /* ic_info_outline@3x.png in Resources */,
+				6FF915DD20D051E4000F2D40 /* ic_info_outline.png in Resources */,
+				6FF915D320D05042000F2D40 /* PigeonViewController.xib in Resources */,
+				6FF915DF20D051E4000F2D40 /* ic_info.png in Resources */,
+				6FF915DC20D051E4000F2D40 /* ic_info@2x.png in Resources */,
 				6F24760320D0419700C2B409 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,8 +409,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F24760020D0419700C2B409 /* ViewController.swift in Sources */,
+				6FF915B920D04BD4000F2D40 /* BaseAboutViewController.swift in Sources */,
+				6FF915B620D04B6F000F2D40 /* BaseAboutNavigationViewController.swift in Sources */,
+				6FF915C320D04D12000F2D40 /* AboutViewController.swift in Sources */,
 				6F2475FE20D0419700C2B409 /* AppDelegate.swift in Sources */,
+				6FF9159E20D047EE000F2D40 /* Nib.swift in Sources */,
+				6FF9159B20D047C3000F2D40 /* BaseNavigationViewController.swift in Sources */,
+				6FF915BC20D04C23000F2D40 /* BaseDepartmentViewController.swift in Sources */,
+				6FF915A420D04875000F2D40 /* UIColor+RGB.swift in Sources */,
+				6FF915CE20D05017000F2D40 /* BasePigeonNavigationViewController.swift in Sources */,
+				6FF915CC20D04FD8000F2D40 /* BasePigeonViewController.swift in Sources */,
+				6FF915A820D04A31000F2D40 /* MainTabBarViewController.swift in Sources */,
+				6FF9159320D04723000F2D40 /* Label.swift in Sources */,
+				6FF915B020D04AD6000F2D40 /* BaseScreenViewController.swift in Sources */,
+				6FF915D220D05042000F2D40 /* PigeonViewController.swift in Sources */,
+				6FF915C820D04F6D000F2D40 /* DepartmentViewController.swift in Sources */,
+				6FF915A120D04821000F2D40 /* Const.swift in Sources */,
+				6FF915BE20D04C70000F2D40 /* BaseDepartmentNavigatationViewController.swift in Sources */,
+				6FF9159620D0474E000F2D40 /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
