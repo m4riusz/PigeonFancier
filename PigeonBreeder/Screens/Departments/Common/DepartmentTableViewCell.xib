@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="detailButton" indentationWidth="10" rowHeight="137" id="KGk-i7-Jjw" customClass="DepartmentTableViewCell" customModule="PigeonBreeder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="137"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="318" height="136.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odf-30-mfd">
+                        <rect key="frame" x="0.0" y="0.0" width="318" height="136.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="0486" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg6-7Z-QtR" customClass="Label" customModule="PigeonBreeder" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="42" height="120.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CZĘSTOCHOWA-POŁNOC" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xq-sw-8rA" customClass="Label" customModule="PigeonBreeder" customModuleProvider="target">
+                                <rect key="frame" x="58" y="8" width="204.5" height="120.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Zg6-7Z-QtR" secondAttribute="bottom" constant="8" id="5Kp-Rj-Hzb"/>
+                            <constraint firstItem="Zg6-7Z-QtR" firstAttribute="top" secondItem="Odf-30-mfd" secondAttribute="top" constant="8" id="Ebn-G0-W5l"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8xq-sw-8rA" secondAttribute="trailing" constant="8" id="FYr-XG-XwV"/>
+                            <constraint firstAttribute="bottom" secondItem="8xq-sw-8rA" secondAttribute="bottom" constant="8" id="O14-7M-ItD"/>
+                            <constraint firstItem="Zg6-7Z-QtR" firstAttribute="leading" secondItem="Odf-30-mfd" secondAttribute="leading" constant="8" id="bPU-Ec-hWt"/>
+                            <constraint firstItem="8xq-sw-8rA" firstAttribute="top" secondItem="Odf-30-mfd" secondAttribute="top" constant="8" id="pkh-5S-EoK"/>
+                            <constraint firstItem="8xq-sw-8rA" firstAttribute="leading" secondItem="Zg6-7Z-QtR" secondAttribute="trailing" constant="8" id="qbx-O2-BHQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Odf-30-mfd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3sU-SD-LPk"/>
+                    <constraint firstAttribute="bottom" secondItem="Odf-30-mfd" secondAttribute="bottom" id="BAL-V3-O63"/>
+                    <constraint firstItem="Odf-30-mfd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KfA-W7-6vl"/>
+                    <constraint firstAttribute="trailing" secondItem="Odf-30-mfd" secondAttribute="trailing" id="cY3-fb-yMq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="departmentNameLabel" destination="8xq-sw-8rA" id="CjT-Xm-KzD"/>
+                <outlet property="departmentNumberLabel" destination="Zg6-7Z-QtR" id="FYc-3d-Az4"/>
+            </connections>
+            <point key="canvasLocation" x="-42" y="100.5"/>
+        </tableViewCell>
+    </objects>
+</document>
