@@ -1,7 +1,7 @@
 import Foundation
 
 extension NSObject {
-    var className: String {
+    static var className: String {
         return String(describing: self)
     }
 }

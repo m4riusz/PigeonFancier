@@ -7,7 +7,7 @@ class DepartmentViewController: BaseDepartmentViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(DepartmentTableViewCell, forCellReuseIdentifier: DepartmentTableViewCell.)
+        tableView.register(DepartmentTableViewCell.classForCoder(), forCellReuseIdentifier: DepartmentTableViewCell.className)
         
         departments = [
                 Department(favourite: false, evidenceNumber: "0280", name: "Kutno", ownerFirstName: "Tomasz", ownerLastName: "Ogrodowski", ownerStreet: "Pojezierska 42", ownerCity: "Kutno", ownerPostalCode: "99-123", ownerPhoneNumber: nil),
@@ -16,5 +16,17 @@ class DepartmentViewController: BaseDepartmentViewController {
                 Department(favourite: false, evidenceNumber: "0380", name: "Kutno", ownerFirstName: "Tomasz", ownerLastName: "Ogrodowski", ownerStreet: "Pojezierska 42", ownerCity: "Kutno", ownerPostalCode: "99-123", ownerPhoneNumber: nil),
                 Department(favourite: false, evidenceNumber: "018", name: "Kutno", ownerFirstName: "Tomasz", ownerLastName: "Ogrodowski", ownerStreet: "Pojezierska 42", ownerCity: "Kutno", ownerPostalCode: "99-123", ownerPhoneNumber: nil)
         ]
+    }
+}
+
+extension DepartmentViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return departments!.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: DepartmentTableViewCell = tableView.dequeueReusableCell(withIdentifier: DepartmentTableViewCell.className, for: indexPath) as! DepartmentTableViewCell
+        cell.loadFromData(departments![indexPath.row])
+        return cell;
     }
 }

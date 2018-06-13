@@ -11,7 +11,7 @@ class DepartmentTableViewCell: UITableViewCell, DataSourceLoading {
     }
 
     func loadFromData(_ data: Any) {
-        guard data is Department else {
+        guard data is Department && departmentNameLabel != nil else {
             return
         }
         let department = data as! Department
