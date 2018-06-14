@@ -1,4 +1,8 @@
 
+struct District {
+    let name: String
+}
+
 struct Department {
     var favourite: Bool
     let evidenceNumber: String

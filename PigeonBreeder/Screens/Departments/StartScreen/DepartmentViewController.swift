@@ -3,6 +3,7 @@ import UIKit
 class DepartmentViewController: BaseDepartmentViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    var items: [District: Department]?
     var departments: [Department]?
     
     override func viewDidLoad() {
