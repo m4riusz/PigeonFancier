@@ -7,7 +7,7 @@ class DepartmentViewController: BaseDepartmentViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(DepartmentTableViewCell.classForCoder(), forCellReuseIdentifier: DepartmentTableViewCell.className)
+        tableView.register(UINib(nibName: DepartmentTableViewCell.className, bundle: nil), forCellReuseIdentifier: DepartmentTableViewCell.className)
         
         departments = [
                 Department(favourite: false, evidenceNumber: "0280", name: "Kutno", ownerFirstName: "Tomasz", ownerLastName: "Ogrodowski", ownerStreet: "Pojezierska 42", ownerCity: "Kutno", ownerPostalCode: "99-123", ownerPhoneNumber: nil),

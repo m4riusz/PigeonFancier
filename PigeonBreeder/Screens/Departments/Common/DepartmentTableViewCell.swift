@@ -6,12 +6,12 @@ class DepartmentTableViewCell: UITableViewCell, DataSourceLoading {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        departmentNumberLabel.labelStyle = .bodyBold14_20
-        departmentNameLabel.labelStyle = .body14_20
+        departmentNumberLabel.labelStyle = .bodyBold(16.0, 20.0)
+        departmentNameLabel.labelStyle = .capition(16.0, 20.0)
     }
 
     func loadFromData(_ data: Any) {
-        guard data is Department && departmentNameLabel != nil else {
+        guard data is Department else {
             return
         }
         let department = data as! Department
