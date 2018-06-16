@@ -29,6 +29,7 @@ class Label: UILabel {
     private func setupFontForStyle(_ style: LabelStyle) -> Void {
         let font: UIFont
         let fontParagraph: NSMutableParagraphStyle = NSMutableParagraphStyle()
+        fontParagraph.alignment = textAlignment
         let color: UIColor
         
         switch style {
