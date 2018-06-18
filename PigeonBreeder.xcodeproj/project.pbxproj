@@ -18,6 +18,8 @@
 		6F24760820D0419800C2B409 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F24760620D0419800C2B409 /* LaunchScreen.storyboard */; };
 		6FBD922020D839CC001F6197 /* EmptyMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBD921E20D839CC001F6197 /* EmptyMaskView.swift */; };
 		6FBD922120D839CC001F6197 /* EmptyMaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBD921F20D839CC001F6197 /* EmptyMaskView.xib */; };
+		6FBD922820D84186001F6197 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FBD922A20D84186001F6197 /* Localizable.strings */; };
+		6FBD922D20D841B3001F6197 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FBD922F20D841B3001F6197 /* Localizable.strings */; };
 		6FC28C8C20D17FC5004A81F8 /* DepartmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC28C8A20D17FC5004A81F8 /* DepartmentTableViewCell.swift */; };
 		6FC28C8D20D17FC5004A81F8 /* DepartmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC28C8B20D17FC5004A81F8 /* DepartmentTableViewCell.xib */; };
 		6FC28C8F20D18388004A81F8 /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC28C8E20D18388004A81F8 /* DataSourceProtocol.swift */; };
@@ -63,6 +65,10 @@
 		6F24760920D0419800C2B409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FBD921E20D839CC001F6197 /* EmptyMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyMaskView.swift; sourceTree = "<group>"; };
 		6FBD921F20D839CC001F6197 /* EmptyMaskView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyMaskView.xib; sourceTree = "<group>"; };
+		6FBD922220D8408D001F6197 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
+		6FBD922320D8408D001F6197 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		6FBD922920D84186001F6197 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6FBD922E20D841B3001F6197 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6FC28C8A20D17FC5004A81F8 /* DepartmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentTableViewCell.swift; sourceTree = "<group>"; };
 		6FC28C8B20D17FC5004A81F8 /* DepartmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentTableViewCell.xib; sourceTree = "<group>"; };
 		6FC28C8E20D18388004A81F8 /* DataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
@@ -119,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				6F2475FC20D0419700C2B409 /* PigeonBreeder */,
+				6FBD922A20D84186001F6197 /* Localizable.strings */,
+				6FBD922F20D841B3001F6197 /* Localizable.strings */,
 				6F2475FB20D0419700C2B409 /* Products */,
 				ABC8BE92AC76FDCF696EAC16 /* Pods */,
 				B7378968439E24ABECCD958D /* Frameworks */,
@@ -415,7 +423,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FF915C920D04F6D000F2D40 /* DepartmentViewController.xib in Resources */,
+				6FBD922D20D841B3001F6197 /* Localizable.strings in Resources */,
 				6F24760820D0419800C2B409 /* LaunchScreen.storyboard in Resources */,
+				6FBD922820D84186001F6197 /* Localizable.strings in Resources */,
 				6F24760520D0419800C2B409 /* Assets.xcassets in Resources */,
 				6FF915C420D04D12000F2D40 /* AboutViewController.xib in Resources */,
 				6FBD922120D839CC001F6197 /* EmptyMaskView.xib in Resources */,
@@ -493,6 +503,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6F24760220D0419700C2B409 /* Base */,
+				6FBD922220D8408D001F6197 /* pl */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -501,8 +512,25 @@
 			isa = PBXVariantGroup;
 			children = (
 				6F24760720D0419800C2B409 /* Base */,
+				6FBD922320D8408D001F6197 /* pl */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6FBD922A20D84186001F6197 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FBD922920D84186001F6197 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		6FBD922F20D841B3001F6197 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FBD922E20D841B3001F6197 /* pl */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -512,6 +540,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -572,6 +601,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
