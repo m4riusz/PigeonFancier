@@ -2,7 +2,6 @@ import UIKit
 
 enum DepartmentEmptyTableViewCellType {
     case none
-    case noDepartments
     case noDepartmemtsFilterResult
 }
 
@@ -21,7 +20,7 @@ class DepartmentEmptyTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         titleLabel.labelStyle = .bodyBold(16.0, 20.0)
-        descriptionLabel.labelStyle = .capition(14.0, 20.0)
+        descriptionLabel.labelStyle = .capition(14.0, 5.0)
     }
     
     fileprivate func setupForType(_ type: DepartmentEmptyTableViewCellType) {
@@ -32,11 +31,6 @@ class DepartmentEmptyTableViewCell: UITableViewCell {
             image = ""
             title = ""
             description = ""
-            break;
-        case .noDepartments:
-            image = "ic_sad_face"
-            title = "Brak oddziałów"
-            description = "Oddziały aktualnie nie dostępne"
             break;
         case .noDepartmemtsFilterResult:
             image = "ic_empty_filter_result"

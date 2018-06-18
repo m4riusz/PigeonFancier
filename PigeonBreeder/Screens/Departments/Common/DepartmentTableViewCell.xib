@@ -20,28 +20,48 @@
                 <rect key="frame" x="0.0" y="0.0" width="278" height="147.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdF-l8-Qmx">
+                        <rect key="frame" x="0.0" y="0.0" width="278" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Amx-6P-RmQ"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="0486" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg6-7Z-QtR" customClass="Label" customModule="PigeonBreeder" customModuleProvider="target">
-                        <rect key="frame" x="16" y="8" width="55.5" height="131.5"/>
+                        <rect key="frame" x="16" y="9" width="55.5" height="129"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CZĘSTOCHOWA-POŁNOC" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xq-sw-8rA" customClass="Label" customModule="PigeonBreeder" customModuleProvider="target">
-                        <rect key="frame" x="79.5" y="8" width="182.5" height="131.5"/>
+                        <rect key="frame" x="79.5" y="9" width="182.5" height="129.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b00-wB-zlZ">
+                        <rect key="frame" x="0.0" y="146" width="278" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="P97-H1-bcb"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Zg6-7Z-QtR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="0KP-mr-j1G"/>
+                    <constraint firstItem="b00-wB-zlZ" firstAttribute="top" secondItem="8xq-sw-8rA" secondAttribute="bottom" constant="8" id="060-n0-mze"/>
+                    <constraint firstAttribute="bottom" secondItem="b00-wB-zlZ" secondAttribute="bottom" id="0yb-js-7fW"/>
+                    <constraint firstItem="rdF-l8-Qmx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7Se-95-7WA"/>
+                    <constraint firstItem="Zg6-7Z-QtR" firstAttribute="top" secondItem="rdF-l8-Qmx" secondAttribute="bottom" constant="8" id="BZJ-me-q0D"/>
                     <constraint firstItem="Zg6-7Z-QtR" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:5" priority="999" id="Eef-cN-kkf"/>
-                    <constraint firstAttribute="bottom" secondItem="Zg6-7Z-QtR" secondAttribute="bottom" constant="8" id="G31-yi-Rhk"/>
-                    <constraint firstAttribute="bottom" secondItem="8xq-sw-8rA" secondAttribute="bottom" constant="8" id="JHS-xF-S0t"/>
-                    <constraint firstItem="8xq-sw-8rA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Vzx-oc-JdX"/>
+                    <constraint firstItem="b00-wB-zlZ" firstAttribute="top" secondItem="Zg6-7Z-QtR" secondAttribute="bottom" constant="8" id="SFj-mx-T7k"/>
+                    <constraint firstAttribute="trailing" secondItem="b00-wB-zlZ" secondAttribute="trailing" id="XHT-3u-UY1"/>
+                    <constraint firstAttribute="trailing" secondItem="rdF-l8-Qmx" secondAttribute="trailing" id="ai2-09-9y0"/>
+                    <constraint firstItem="8xq-sw-8rA" firstAttribute="top" secondItem="rdF-l8-Qmx" secondAttribute="bottom" constant="8" id="cwq-LA-LBb"/>
                     <constraint firstItem="Zg6-7Z-QtR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ezU-o9-Cxx"/>
                     <constraint firstAttribute="trailing" secondItem="8xq-sw-8rA" secondAttribute="trailing" constant="16" id="mgm-HL-Lnn"/>
+                    <constraint firstItem="rdF-l8-Qmx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="nAk-0g-kXI"/>
                     <constraint firstItem="8xq-sw-8rA" firstAttribute="leading" secondItem="Zg6-7Z-QtR" secondAttribute="trailing" constant="8" id="oDP-1M-fpm"/>
+                    <constraint firstItem="b00-wB-zlZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zj0-xT-77G"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

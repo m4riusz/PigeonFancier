@@ -4,6 +4,7 @@ class DepartmentViewController: BaseDepartmentViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var emptyMaskView: EmptyMaskView!
     
     var distincts: [District]?
     var filteredDistincts: [District]?
@@ -12,7 +13,7 @@ class DepartmentViewController: BaseDepartmentViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName: DepartmentTableViewCell.className, bundle: nil), forCellReuseIdentifier: DepartmentTableViewCell.className)
         tableView.register(UINib(nibName: DepartmentEmptyTableViewCell.className, bundle: nil), forCellReuseIdentifier: DepartmentEmptyTableViewCell.className)
-        
+        emptyMaskView.setupForType(.noDepartments)
         distincts = [
                     District(name: "Biała Podlaska", president: Person(firstName: "Janusz", lastName: "Podlaski", phoneNumber: ["444-122-222"], email: nil), address: Address(street: "ul. Polna 18", city: "Biała Podlaska", postalCode: "99-123"), departments: [
                         Department(favourite: true, evidenceNumber: "07", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300")),
@@ -53,6 +54,12 @@ class DepartmentViewController: BaseDepartmentViewController {
         ]
         filteredDistincts = distincts
         tableView.tableFooterView = UIView(frame: CGRect.zero)
+        updateMaskView()
+    }
+    
+    func updateMaskView() -> Void {
+        tableView.isHidden = distincts?.count == 0
+        emptyMaskView.isHidden = distincts?.count != 0
     }
 }
 
@@ -104,7 +111,7 @@ extension DepartmentViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (filteredDistincts!.isEmpty) {
             let cell: DepartmentEmptyTableViewCell = tableView.dequeueReusableCell(withIdentifier: DepartmentEmptyTableViewCell.className, for: indexPath) as! DepartmentEmptyTableViewCell
-            cell.type = distincts!.isEmpty ? DepartmentEmptyTableViewCellType.noDepartments : DepartmentEmptyTableViewCellType.noDepartmemtsFilterResult
+            cell.type = DepartmentEmptyTableViewCellType.noDepartmemtsFilterResult
             return cell
         } else {
             let cell: DepartmentTableViewCell = tableView.dequeueReusableCell(withIdentifier: DepartmentTableViewCell.className, for: indexPath) as! DepartmentTableViewCell
