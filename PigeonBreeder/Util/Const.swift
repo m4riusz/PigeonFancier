@@ -3,7 +3,6 @@ import UIKit
 struct Config {
     
     struct Color {
-        
         static let orange = UIColor().colorWithRGB(red: 244, green: 155, blue: 66)
         static let orangeDark = UIColor().colorWithRGB(red: 206, green: 139, blue: 66)
         static let white = UIColor.white

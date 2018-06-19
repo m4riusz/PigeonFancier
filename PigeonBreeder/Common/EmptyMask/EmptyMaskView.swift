@@ -18,16 +18,16 @@ class EmptyMaskView: NibView {
         
         switch type {
         case .none:
-            image = ""
-            title = ""
-            description = ""
+            image = LocalizableStrings.empty.localized
+            title = LocalizableStrings.empty.localized
+            description = LocalizableStrings.empty.localized
             titleStyle = .bodyBold(14.0, 20)
             descriptionStyle = .capition(14.0, 20)
             break
         case .noDepartments:
             image = "ic_sad_face"
-            title = "Oddziały są niedostępne"
-            description = "Spróbuj ponownie później"
+            title = LocalizableStrings.departmentsNotAvailable.localized
+            description = LocalizableStrings.tryAgainLater.localized
             titleStyle = .bodyBold(16.0, 20)
             descriptionStyle = .capition(14.0, 20)
             break

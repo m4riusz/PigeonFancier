@@ -14,6 +14,9 @@ class DepartmentViewController: BaseDepartmentViewController {
         tableView.register(UINib(nibName: DepartmentTableViewCell.className, bundle: nil), forCellReuseIdentifier: DepartmentTableViewCell.className)
         tableView.register(UINib(nibName: DepartmentEmptyTableViewCell.className, bundle: nil), forCellReuseIdentifier: DepartmentEmptyTableViewCell.className)
         emptyMaskView.setupForType(.noDepartments)
+        searchBar.setCancelButtonTitle(LocalizableStrings.cancel.localized)
+        searchBar.placeholder = LocalizableStrings.search.localized
+        
         distincts = [
                     District(name: "Biała Podlaska", president: Person(firstName: "Janusz", lastName: "Podlaski", phoneNumber: ["444-122-222"], email: nil), address: Address(street: "ul. Polna 18", city: "Biała Podlaska", postalCode: "99-123"), departments: [
                         Department(favourite: true, evidenceNumber: "07", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300")),
@@ -52,6 +55,7 @@ class DepartmentViewController: BaseDepartmentViewController {
                         Department(favourite: false, evidenceNumber: "017", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300"))
                         ])
         ]
+        
         filteredDistincts = distincts
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         updateMaskView()

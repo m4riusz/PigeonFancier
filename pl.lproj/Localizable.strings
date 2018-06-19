@@ -1,1 +1,16 @@
+// DEPARTMENTS
+"departments" = "Oddziały";
+"departments_not_available" = "Oddziały są aktualnie niedostępne";
+"departments_not_found" = "Nie znaleziono oddziałów";
+"departments_not_found_filter" = "Nie znaleziono oddziałów, które pasowały by do podanej frazy";
 
+// BOTTOM BAR
+"nav_pigeons" = "Gołębie";
+"nav_departments" = "Oddziały";
+"nav_about" = "O aplikacji";
+
+// GENERAL
+"empty_string" = "";
+"try_again_later" = "Coś poszło nie tak, spróbuj ponownie później";
+"search" = "Szukaj";
+"cancel" = "Anuluj";

@@ -1,0 +1,17 @@
+// DEPARTMENTS
+"departments" = "Departments";
+"departments_not_available" = "Departments are not available at this moment";
+"departments_not_found" = "Departments not found";
+"departments_not_found_filter" = "Did not found mathing departmetns";
+
+// BOTTOM BAR
+"nav_pigeons" = "Pigeons";
+"nav_departments" = "Departments";
+"nav_about" = "About";
+
+// GENERAL
+"empty_string" = "";
+"try_again_later" = "Something went wrong. Try again later";
+"search" = "Search";
+"cancel" = "Cancel";
+

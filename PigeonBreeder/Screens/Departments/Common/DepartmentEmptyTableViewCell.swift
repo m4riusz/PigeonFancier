@@ -28,14 +28,14 @@ class DepartmentEmptyTableViewCell: UITableViewCell {
         
         switch type {
         case .none:
-            image = ""
-            title = ""
-            description = ""
+            image = LocalizableStrings.empty.localized
+            title = LocalizableStrings.empty.localized
+            description = LocalizableStrings.empty.localized
             break;
         case .noDepartmemtsFilterResult:
             image = "ic_empty_filter_result"
-            title = "Nie znaleziono oddziałów"
-            description = "Nie odnaleziono oddziałów pasujących do podanej frazy"
+            title = LocalizableStrings.departmentsNotFound.localized
+            description = LocalizableStrings.departmentsNotFoundFilter.localized
             break;
         }
         
