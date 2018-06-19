@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="305" id="KGk-i7-Jjw" customClass="DepartmentDetailHeaderTableViewCell" customModule="PigeonBreeder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="367" height="305"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="367" height="304.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yue-Sc-Yc9">
+                        <rect key="frame" x="16" y="11" width="335" height="283"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPa-aR-qOK" customClass="Label" customModule="PigeonBreeder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bełchatów" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxw-v5-XKL" customClass="Label" customModule="PigeonBreeder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="83" width="335" height="74.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PZHGP Biała Podlaska" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kr-qB-FTW" customClass="Label" customModule="PigeonBreeder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="165.5" width="335" height="117.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPq-EN-TMg" customClass="Button" customModule="PigeonBreeder" customModuleProvider="target">
+                        <rect key="frame" x="327" y="11" width="24" height="24"/>
+                        <state key="normal" image="ic_star"/>
+                        <state key="selected" image="ic_star_filled"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="yue-Sc-Yc9" secondAttribute="bottom" id="AKB-2m-nrg"/>
+                    <constraint firstItem="yue-Sc-Yc9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="BOB-5G-bzB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="iPq-EN-TMg" secondAttribute="trailing" id="PQR-jX-ixL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="yue-Sc-Yc9" secondAttribute="trailing" id="ZCn-r5-0Kx"/>
+                    <constraint firstItem="iPq-EN-TMg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="fH8-oX-1q1"/>
+                    <constraint firstItem="yue-Sc-Yc9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="zqH-DO-aqy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="departmentNameLabel" destination="Fxw-v5-XKL" id="IEx-LP-3lw"/>
+                <outlet property="disctinctNameLabel" destination="5kr-qB-FTW" id="TwP-ln-sNV"/>
+                <outlet property="evidenceNumberLabel" destination="WPa-aR-qOK" id="ol4-kl-bWa"/>
+                <outlet property="favouriteButton" destination="iPq-EN-TMg" id="C7z-wt-fiO"/>
+            </connections>
+            <point key="canvasLocation" x="10.5" y="34.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_star" width="24" height="24"/>
+        <image name="ic_star_filled" width="24" height="24"/>
+    </resources>
+</document>

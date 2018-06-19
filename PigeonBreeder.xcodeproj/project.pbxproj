@@ -27,6 +27,8 @@
 		6FCD982520D9752400AA8E9C /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCD982420D9752400AA8E9C /* LocalizableStrings.swift */; };
 		6FCD982820D97D3A00AA8E9C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FBD922F20D841B3001F6197 /* Localizable.strings */; };
 		6FCD983320D9818800AA8E9C /* UISearchBar+Cancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCD983220D9818800AA8E9C /* UISearchBar+Cancel.swift */; };
+		6FCD983820D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCD983620D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.swift */; };
+		6FCD983920D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FCD983720D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.xib */; };
 		6FEEC56220D52AED0075012A /* DepartmentEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEEC56020D52AED0075012A /* DepartmentEmptyTableViewCell.swift */; };
 		6FEEC56320D52AED0075012A /* DepartmentEmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FEEC56120D52AED0075012A /* DepartmentEmptyTableViewCell.xib */; };
 		6FF9159320D04723000F2D40 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF9159220D04723000F2D40 /* Label.swift */; };
@@ -79,6 +81,8 @@
 		6FCD982620D9797F00AA8E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6FCD983120D97E8300AA8E9C /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6FCD983220D9818800AA8E9C /* UISearchBar+Cancel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Cancel.swift"; sourceTree = "<group>"; };
+		6FCD983620D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentDetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		6FCD983720D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentDetailHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		6FEEC56020D52AED0075012A /* DepartmentEmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentEmptyTableViewCell.swift; sourceTree = "<group>"; };
 		6FEEC56120D52AED0075012A /* DepartmentEmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentEmptyTableViewCell.xib; sourceTree = "<group>"; };
 		6FF9159220D04723000F2D40 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 		6F0C226620D4408F009CA95D /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				6FCD983520D9880B00AA8E9C /* Controls */,
 				6F0C226720D440C5009CA95D /* DepartmentDetailViewController.swift */,
 				6F0C226820D440C5009CA95D /* DepartmentDetailViewController.xib */,
 			);
@@ -174,10 +179,6 @@
 		6FC28C8920D17F81004A81F8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				6FC28C8A20D17FC5004A81F8 /* DepartmentTableViewCell.swift */,
-				6FC28C8B20D17FC5004A81F8 /* DepartmentTableViewCell.xib */,
-				6FEEC56020D52AED0075012A /* DepartmentEmptyTableViewCell.swift */,
-				6FEEC56120D52AED0075012A /* DepartmentEmptyTableViewCell.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -199,6 +200,26 @@
 				6F0C226420D4399D009CA95D /* Address.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6FCD983420D987CF00AA8E9C /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				6FC28C8A20D17FC5004A81F8 /* DepartmentTableViewCell.swift */,
+				6FC28C8B20D17FC5004A81F8 /* DepartmentTableViewCell.xib */,
+				6FEEC56020D52AED0075012A /* DepartmentEmptyTableViewCell.swift */,
+				6FEEC56120D52AED0075012A /* DepartmentEmptyTableViewCell.xib */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		6FCD983520D9880B00AA8E9C /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				6FCD983620D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.swift */,
+				6FCD983720D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.xib */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 		6FF9158F20D04663000F2D40 /* Common */ = {
@@ -309,7 +330,7 @@
 				6F0C226620D4408F009CA95D /* Details */,
 				6FC28C9120D1871D004A81F8 /* Models */,
 				6FC28C8920D17F81004A81F8 /* Common */,
-				6FF915C520D04F42000F2D40 /* StartScreen */,
+				6FF915C520D04F42000F2D40 /* List */,
 				6FF915BB20D04C23000F2D40 /* BaseDepartmentViewController.swift */,
 				6FF915BD20D04C70000F2D40 /* BaseDepartmentNavigatationViewController.swift */,
 			);
@@ -325,13 +346,14 @@
 			path = StartScreen;
 			sourceTree = "<group>";
 		};
-		6FF915C520D04F42000F2D40 /* StartScreen */ = {
+		6FF915C520D04F42000F2D40 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				6FCD983420D987CF00AA8E9C /* Controls */,
 				6FF915C620D04F6D000F2D40 /* DepartmentViewController.swift */,
 				6FF915C720D04F6D000F2D40 /* DepartmentViewController.xib */,
 			);
-			path = StartScreen;
+			path = List;
 			sourceTree = "<group>";
 		};
 		6FF915CA20D04FAC000F2D40 /* Pigeons */ = {
@@ -440,6 +462,7 @@
 				6FEEC56320D52AED0075012A /* DepartmentEmptyTableViewCell.xib in Resources */,
 				6F0C226A20D440C5009CA95D /* DepartmentDetailViewController.xib in Resources */,
 				6F24760320D0419700C2B409 /* Main.storyboard in Resources */,
+				6FCD983920D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +517,7 @@
 				6FF915B020D04AD6000F2D40 /* BaseScreenViewController.swift in Sources */,
 				6FF915D220D05042000F2D40 /* PigeonViewController.swift in Sources */,
 				6F0C226520D4399D009CA95D /* Address.swift in Sources */,
+				6FCD983820D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.swift in Sources */,
 				6FC28C9320D1873B004A81F8 /* Department.swift in Sources */,
 				6FC28C9520D19298004A81F8 /* NSObject+ClassName.swift in Sources */,
 				6FF915C820D04F6D000F2D40 /* DepartmentViewController.swift in Sources */,
