@@ -6,8 +6,9 @@ class DepartmentViewController: BaseDepartmentViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var emptyMaskView: EmptyMaskView!
     
-    var distincts: [District]?
-    var filteredDistincts: [District]?
+    var distincts: [District] = []
+    var filteredDistincts: [District] = []
+    let distinctService: IDisctinctService = DistinctService();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,54 +17,24 @@ class DepartmentViewController: BaseDepartmentViewController {
         emptyMaskView.setupForType(.noDepartments)
         searchBar.setCancelButtonTitle(LocalizableStrings.cancel.localized)
         searchBar.placeholder = LocalizableStrings.search.localized
-        
-        distincts = [
-                    District(name: "Biała Podlaska", president: Person(firstName: "Janusz", lastName: "Podlaski", phoneNumber: ["444-122-222"], email: nil), address: Address(street: "ul. Polna 18", city: "Biała Podlaska", postalCode: "99-123"), departments: [
-                        Department(favourite: true, evidenceNumber: "07", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300")),
-                        Department(favourite: false, evidenceNumber: "08", name: "Bełchatów", owner: Person(firstName: "Kamil", lastName: "Rybus", phoneNumber: ["111-111-111", "222-222-222"], email: nil), address: Address(street: "ul Pawła 2", city: "Bełchatów", postalCode: "90-300")),
-                        Department(favourite: false, evidenceNumber: "09", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300")),
-                        Department(favourite: false, evidenceNumber: "017", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300"))
-                    ]),
-                    District(name: "Lódź", president: Person(firstName: "Janusz", lastName: "Podlaski", phoneNumber: ["444-122-222"], email: nil), address: Address(street: "ul. Polna 18", city: "Biała Podlaska", postalCode: "99-123"), departments: [
-                        Department(favourite: true, evidenceNumber: "07", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300")),
-                        Department(favourite: false, evidenceNumber: "017", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300"))
-                    ]),
-                    District(name: "Piotrków Trybunalski", president: Person(firstName: "Janusz", lastName: "Podlaski", phoneNumber: ["444-122-222"], email: nil), address: Address(street: "ul. Polna 18", city: "Biała Podlaska", postalCode: "99-123"), departments: [
-                        Department(favourite: true, evidenceNumber: "07", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300")),
-                        Department(favourite: false, evidenceNumber: "08", name: "Bełchatów", owner: Person(firstName: "Kamil", lastName: "Rybus", phoneNumber: ["111-111-111", "222-222-222"], email: nil), address: Address(street: "ul Pawła 2", city: "Bełchatów", postalCode: "90-300")),
-                        Department(favourite: true, evidenceNumber: "07", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300")),
-                        Department(favourite: false, evidenceNumber: "08", name: "Bełchatów", owner: Person(firstName: "Kamil", lastName: "Rybus", phoneNumber: ["111-111-111", "222-222-222"], email: nil), address: Address(street: "ul Pawła 2", city: "Bełchatów", postalCode: "90-300")),
-                        Department(favourite: false, evidenceNumber: "09", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300")),
-                        Department(favourite: false, evidenceNumber: "017", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300"))
-                        ]),
-                    District(name: "Biała Podlaska", president: Person(firstName: "Janusz", lastName: "Podlaski", phoneNumber: ["444-122-222"], email: nil), address: Address(street: "ul. Polna 18", city: "Biała Podlaska", postalCode: "99-123"), departments: [
-                        Department(favourite: true, evidenceNumber: "07", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300")),
-                        Department(favourite: false, evidenceNumber: "08", name: "AAAAA", owner: Person(firstName: "Kamil", lastName: "Rybus", phoneNumber: ["111-111-111", "222-222-222"], email: nil), address: Address(street: "ul Pawła 2", city: "Bełchatów", postalCode: "90-300")),
-                        Department(favourite: false, evidenceNumber: "09", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300")),
-                        Department(favourite: false, evidenceNumber: "017", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300"))
-                        ]),
-                    District(name: "Lódź", president: Person(firstName: "Janusz", lastName: "Podlaski", phoneNumber: ["444-122-222"], email: nil), address: Address(street: "ul. Polna 18", city: "Biała Podlaska", postalCode: "99-123"), departments: [
-                        Department(favourite: true, evidenceNumber: "07", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300")),
-                        Department(favourite: false, evidenceNumber: "017", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300"))
-                        ]),
-                    District(name: "Piotrków Trybunalski", president: Person(firstName: "Janusz", lastName: "Podlaski", phoneNumber: ["444-122-222"], email: nil), address: Address(street: "ul. Polna 18", city: "Biała Podlaska", postalCode: "99-123"), departments: [
-                        Department(favourite: true, evidenceNumber: "07", name: "Aaaa", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300")),
-                        Department(favourite: false, evidenceNumber: "08", name: "Bełchatów", owner: Person(firstName: "Kamil", lastName: "Rybus", phoneNumber: ["111-111-111", "222-222-222"], email: nil), address: Address(street: "ul Pawła 2", city: "Bełchatów", postalCode: "90-300")),
-                        Department(favourite: true, evidenceNumber: "07", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300")),
-                        Department(favourite: false, evidenceNumber: "08", name: "Bełchatów", owner: Person(firstName: "Kamil", lastName: "Rybus", phoneNumber: ["111-111-111", "222-222-222"], email: nil), address: Address(street: "ul Pawła 2", city: "Bełchatów", postalCode: "90-300")),
-                        Department(favourite: false, evidenceNumber: "09", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300")),
-                        Department(favourite: false, evidenceNumber: "017", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300"))
-                        ])
-        ]
-        
-        filteredDistincts = distincts
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        updateMaskView()
+    }
+    
+    override func loadScreenData() {
+        super.loadScreenData()
+        // TODO: add sample mask
+        distinctService.getDistinctsWithDepartments(successCallback: { (distincts) in
+            self.distincts = distincts
+            self.filteredDistincts = distincts
+            self.updateMaskView()
+        }) { (error) in
+            // TODO add error mask
+        }
     }
     
     func updateMaskView() -> Void {
-        tableView.isHidden = distincts?.count == 0
-        emptyMaskView.isHidden = distincts?.count != 0
+        tableView.isHidden = distincts.count == 0
+        emptyMaskView.isHidden = distincts.count != 0
     }
 }
 
@@ -87,7 +58,7 @@ extension DepartmentViewController: UISearchBarDelegate {
              return department.name.lowercased().contains(lowercasedSearchText) || department.evidenceNumber.lowercased().contains(lowercasedSearchText)
             }
         
-        let filteredDistinctsTmp = distincts!.filter({ (distinct) -> Bool in
+        let filteredDistinctsTmp = distincts.filter({ (distinct) -> Bool in
             return distinct.departments.contains(where: departmentFilter)
         })
         filteredDistincts = filteredDistinctsTmp.map({ (distinct) -> District in
@@ -105,26 +76,26 @@ extension DepartmentViewController: UISearchBarDelegate {
 extension DepartmentViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return filteredDistincts!.isEmpty ? 1 : filteredDistincts!.count
+        return filteredDistincts.isEmpty ? 1 : filteredDistincts.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredDistincts!.isEmpty ? 1 : filteredDistincts![section].departments.count
+        return filteredDistincts.isEmpty ? 1 : filteredDistincts[section].departments.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (filteredDistincts!.isEmpty) {
+        if (filteredDistincts.isEmpty) {
             let cell: DepartmentEmptyTableViewCell = tableView.dequeueReusableCell(withIdentifier: DepartmentEmptyTableViewCell.className, for: indexPath) as! DepartmentEmptyTableViewCell
             cell.type = DepartmentEmptyTableViewCellType.noDepartmemtsFilterResult
             return cell
         } else {
             let cell: DepartmentTableViewCell = tableView.dequeueReusableCell(withIdentifier: DepartmentTableViewCell.className, for: indexPath) as! DepartmentTableViewCell
-            cell.loadFromData(filteredDistincts![indexPath.section].departments[indexPath.row])
+            cell.loadFromData(filteredDistincts[indexPath.section].departments[indexPath.row])
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return filteredDistincts!.isEmpty ? nil : filteredDistincts![section].name
+        return filteredDistincts.isEmpty ? nil : filteredDistincts[section].name
     }
 }
