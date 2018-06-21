@@ -1,10 +1,6 @@
 
-protocol IDisctinctService {
-    func getDistinctsWithDepartments(successCallback: (@escaping ([District]) -> Void), errorBlock: (@escaping (Error) -> Void)) -> Void
-}
 
-
-class DistinctService: IDisctinctService {
+class DepartmentService: IDepartmentService {
     
     func getDistinctsWithDepartments(successCallback: (@escaping ([District]) -> Void), errorBlock: (@escaping (Error) -> Void)) -> Void {
         // TODO: remove mocks

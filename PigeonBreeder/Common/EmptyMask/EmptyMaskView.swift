@@ -3,6 +3,7 @@ import UIKit
 enum EmptyMaskViewType {
     case none
     case noDepartments
+    case noDepartmentsFilterResult
 }
 
 @IBDesignable
@@ -28,6 +29,13 @@ class EmptyMaskView: NibView {
             image = "ic_sad_face"
             title = LocalizableStrings.departmentsNotAvailable.localized
             description = LocalizableStrings.tryAgainLater.localized
+            titleStyle = .bodyBold(16.0, 5)
+            descriptionStyle = .capition(14.0, 5)
+            break
+        case .noDepartmentsFilterResult:
+            image = "ic_empty_filter_result"
+            title = LocalizableStrings.departmentsNotFound.localized
+            description = LocalizableStrings.departmentsNotFoundFilter.localized
             titleStyle = .bodyBold(16.0, 5)
             descriptionStyle = .capition(14.0, 5)
             break

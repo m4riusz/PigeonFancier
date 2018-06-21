@@ -6,96 +6,98 @@ class DepartmentViewController: BaseDepartmentViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var emptyMaskView: EmptyMaskView!
     
-    var distincts: [District] = []
-    var filteredDistincts: [District] = []
-    let distinctService: IDisctinctService = DistinctService();
+    var districts: [District] = []
+    var filteredDistricts: [District] = []
+    var departmentPresenter: IDepartmentPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: DepartmentTableViewCell.className, bundle: nil), forCellReuseIdentifier: DepartmentTableViewCell.className)
-        tableView.register(UINib(nibName: DepartmentEmptyTableViewCell.className, bundle: nil), forCellReuseIdentifier: DepartmentEmptyTableViewCell.className)
-        emptyMaskView.setupForType(.noDepartments)
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         searchBar.setCancelButtonTitle(LocalizableStrings.cancel.localized)
         searchBar.placeholder = LocalizableStrings.search.localized
-        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        self.navigationItem.titleView = searchBar
+        departmentPresenter = DepartmentPresenter(withDepartmentView: self as IDepartmentView, withDepartmentService: DepartmentService())
     }
     
     override func loadScreenData() {
-        super.loadScreenData()
-        // TODO: add sample mask
-        distinctService.getDistinctsWithDepartments(successCallback: { (distincts) in
-            self.distincts = distincts
-            self.filteredDistincts = distincts
-            self.updateMaskView()
-        }) { (error) in
-            // TODO add error mask
-        }
+        departmentPresenter?.onGetDistrictsWithDepartments()
+    }
+}
+
+extension DepartmentViewController: IDepartmentView {
+    
+    func onLoadingData() -> Void {
+        self.emptyMaskView.isHidden = true
+        //TODO:
     }
     
-    func updateMaskView() -> Void {
-        tableView.isHidden = distincts.count == 0
-        emptyMaskView.isHidden = distincts.count != 0
+    func onLoadingDataFinished() -> Void {
+        //TODO:
+    }
+    
+    func onDistrictsLoaded(_ districts: [District]) -> Void {
+        self.districts = districts
+        self.filteredDistricts = districts
+        self.searchBar.isHidden = districts.isEmpty
+        self.tableView.isHidden = districts.isEmpty
+        self.emptyMaskView.isHidden = !districts.isEmpty
+        self.emptyMaskView.setupForType(.noDepartments)
+    }
+    
+    func onDistrictsFailed() -> Void {
+        //TODO:
+    }
+    
+    func onDistrictFilterResult(districts: [District]) -> Void {
+        self.filteredDistricts = districts
+        self.tableView.isHidden = districts.isEmpty
+        self.emptyMaskView.isHidden = !districts.isEmpty
+        self.emptyMaskView.setupForType(.noDepartmentsFilterResult)
+    }
+    
+    func onRefreshView() -> Void {
+        self.tableView.reloadData()
+    }
+    
+    func onHideKeyboard() -> Void {
+        self.searchBar.resignFirstResponder()
+    }
+    
+    func onCleanSearchBar() -> Void {
+        self.searchBar.text = "";
     }
 }
 
 extension DepartmentViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        filteredDistincts = distincts
-        searchBar.text = ""
-        searchBar.resignFirstResponder()
-        reloadData()
+        self.departmentPresenter?.onCleanSearchField()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.isEmpty {
-            filteredDistincts = distincts
-            reloadData()
-            return
-        }
-        let lowercasedSearchText = searchText.lowercased()
-        let departmentFilter: (Department) -> Bool = {(department) -> Bool in
-             return department.name.lowercased().contains(lowercasedSearchText) || department.evidenceNumber.lowercased().contains(lowercasedSearchText)
-            }
-        
-        let filteredDistinctsTmp = distincts.filter({ (distinct) -> Bool in
-            return distinct.departments.contains(where: departmentFilter)
-        })
-        filteredDistincts = filteredDistinctsTmp.map({ (distinct) -> District in
-            let filteredDepartments = distinct.departments.filter(departmentFilter)
-            return District(name: distinct.name, president: distinct.president, address: distinct.address, departments: filteredDepartments)
-        })
-        reloadData()
+        self.departmentPresenter?.onFilterDistinctsByText(searchText)
     }
     
-    private func reloadData() -> Void {
-        tableView.reloadData()
-    }
 }
 
 extension DepartmentViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return filteredDistincts.isEmpty ? 1 : filteredDistincts.count
+        return filteredDistricts.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredDistincts.isEmpty ? 1 : filteredDistincts[section].departments.count
+        return filteredDistricts[section].departments.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (filteredDistincts.isEmpty) {
-            let cell: DepartmentEmptyTableViewCell = tableView.dequeueReusableCell(withIdentifier: DepartmentEmptyTableViewCell.className, for: indexPath) as! DepartmentEmptyTableViewCell
-            cell.type = DepartmentEmptyTableViewCellType.noDepartmemtsFilterResult
-            return cell
-        } else {
-            let cell: DepartmentTableViewCell = tableView.dequeueReusableCell(withIdentifier: DepartmentTableViewCell.className, for: indexPath) as! DepartmentTableViewCell
-            cell.loadFromData(filteredDistincts[indexPath.section].departments[indexPath.row])
-            return cell
-        }
+        let cell: DepartmentTableViewCell = tableView.dequeueReusableCell(withIdentifier: DepartmentTableViewCell.className, for: indexPath) as! DepartmentTableViewCell
+        cell.loadFromData(filteredDistricts[indexPath.section].departments[indexPath.row])
+        return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return filteredDistincts.isEmpty ? nil : filteredDistincts[section].name
+        return filteredDistricts[section].name
     }
 }
