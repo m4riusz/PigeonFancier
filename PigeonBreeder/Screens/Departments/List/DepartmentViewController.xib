@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DepartmentViewController" customModule="PigeonBreeder" customModuleProvider="target">
             <connections>
-                <outlet property="bottomConstraint" destination="jm4-ZY-sE0" id="3BZ-xV-FnL"/>
+                <outlet property="bottomConstraint" destination="1ey-aP-RVx" id="97Y-8c-eNb"/>
                 <outlet property="emptyMaskView" destination="4Vj-vR-vx8" id="v6O-Et-kav"/>
                 <outlet property="searchBar" destination="PZc-j0-om8" id="sFO-5e-se5"/>
                 <outlet property="tableView" destination="AhF-2X-DDf" id="YQm-iW-rA5"/>
@@ -24,44 +24,57 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZc-j0-om8">
-                    <rect key="frame" x="0.0" y="305" width="375" height="56"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
-                    <scopeButtonTitles>
-                        <string>Title</string>
-                        <string>Title</string>
-                    </scopeButtonTitles>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="deQ-4p-bZc"/>
-                    </connections>
-                </searchBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="AhF-2X-DDf">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uO4-QM-0Jn">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                    <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="37d-SM-dsQ"/>
-                    </connections>
-                </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Vj-vR-vx8" customClass="EmptyMaskView" customModule="PigeonBreeder" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="AhF-2X-DDf">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="37d-SM-dsQ"/>
+                            </connections>
+                        </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Vj-vR-vx8" customClass="EmptyMaskView" customModule="PigeonBreeder" customModuleProvider="target">
+                            <rect key="frame" x="-8" y="0.0" width="375" height="647"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="AhF-2X-DDf" firstAttribute="leading" secondItem="uO4-QM-0Jn" secondAttribute="leading" id="LQN-Ud-L5h"/>
+                        <constraint firstItem="4Vj-vR-vx8" firstAttribute="leading" secondItem="uO4-QM-0Jn" secondAttribute="leading" id="Nbw-4O-Joe"/>
+                        <constraint firstItem="4Vj-vR-vx8" firstAttribute="top" secondItem="uO4-QM-0Jn" secondAttribute="top" id="PaC-iO-5Oq"/>
+                        <constraint firstAttribute="bottom" secondItem="4Vj-vR-vx8" secondAttribute="bottom" id="Ptu-uK-2aH"/>
+                        <constraint firstAttribute="trailing" secondItem="4Vj-vR-vx8" secondAttribute="trailing" id="c9p-8m-ivh"/>
+                        <constraint firstAttribute="bottom" secondItem="AhF-2X-DDf" secondAttribute="bottom" id="eek-vA-UzS"/>
+                        <constraint firstItem="AhF-2X-DDf" firstAttribute="top" secondItem="uO4-QM-0Jn" secondAttribute="top" id="uZs-1M-hrT"/>
+                        <constraint firstAttribute="trailing" secondItem="AhF-2X-DDf" secondAttribute="trailing" id="xU0-Wm-R24"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AhF-2X-DDf" secondAttribute="trailing" id="AJ7-FA-VYD"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4Vj-vR-vx8" secondAttribute="bottom" id="Rb3-QT-H2P"/>
-                <constraint firstItem="4Vj-vR-vx8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Zvc-Oi-b9e"/>
-                <constraint firstItem="AhF-2X-DDf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hqy-5m-dFE"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Vj-vR-vx8" secondAttribute="trailing" id="jby-Rb-44R"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AhF-2X-DDf" secondAttribute="bottom" id="jm4-ZY-sE0"/>
-                <constraint firstItem="AhF-2X-DDf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nR0-lp-x0W"/>
-                <constraint firstItem="4Vj-vR-vx8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="w1m-oe-NFM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uO4-QM-0Jn" secondAttribute="bottom" id="1ey-aP-RVx"/>
+                <constraint firstItem="uO4-QM-0Jn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QrO-ZU-TbA"/>
+                <constraint firstItem="uO4-QM-0Jn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YFG-Kc-nJp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uO4-QM-0Jn" secondAttribute="trailing" id="tGJ-Ii-Cg1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-19" y="37"/>
         </view>
+        <searchBar contentMode="redraw" placeholder="Search" showsCancelButton="YES" translucent="NO" id="PZc-j0-om8">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
+            <scopeButtonTitles>
+                <string>Title</string>
+                <string>Title</string>
+            </scopeButtonTitles>
+            <connections>
+                <outlet property="delegate" destination="-1" id="deQ-4p-bZc"/>
+            </connections>
+            <point key="canvasLocation" x="138" y="756"/>
+        </searchBar>
     </objects>
 </document>

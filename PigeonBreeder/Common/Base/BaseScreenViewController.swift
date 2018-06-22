@@ -22,8 +22,8 @@ class BaseScreenViewController: UIViewController {
 
 extension BaseScreenViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
     }
@@ -42,7 +42,6 @@ extension BaseScreenViewController {
                 self.bottomConstraint?.constant = keyboardRect.height
                 self.view.layoutIfNeeded()
             };
-            
         }
     }
     

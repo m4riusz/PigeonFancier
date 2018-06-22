@@ -46,5 +46,9 @@ class EmptyMaskView: NibView {
         titleLabel.labelStyle = titleStyle
         descriptionLabel.labelStyle = descriptionStyle
     }
+    
+    override func prepareForInterfaceBuilder() {
+        setupForType(.noDepartments)
+    }
 
 }
