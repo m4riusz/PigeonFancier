@@ -192,6 +192,7 @@
 		6FC28C9020D18453004A81F8 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				6FF915A920D04A44000F2D40 /* About */,
 				6FC28C8E20D18388004A81F8 /* DataSourceProtocol.swift */,
 			);
 			path = Protocol;
@@ -304,7 +305,6 @@
 		6FF915A520D048AB000F2D40 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				6FF915A920D04A44000F2D40 /* About */,
 				6FF915AA20D04A52000F2D40 /* Departments */,
 				6FF915CA20D04FAC000F2D40 /* Pigeons */,
 				6FF915A620D04A00000F2D40 /* Main */,

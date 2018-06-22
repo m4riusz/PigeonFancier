@@ -2,6 +2,8 @@ import UIKit
 
 class BaseScreenViewController: UIViewController {
     
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         self.title = getTitle()
@@ -16,4 +18,40 @@ class BaseScreenViewController: UIViewController {
         return ""
     }
     
+}
+
+extension BaseScreenViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        if let keyboardRect: CGRect = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? CGRect,
+            let duration: Double = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double {
+            
+            UIView.animate(withDuration: duration) {
+                self.bottomConstraint?.constant = keyboardRect.height
+                self.view.layoutIfNeeded()
+            };
+            
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        if let duration: Double = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double {
+            UIView.animate(withDuration: duration) {
+                self.bottomConstraint?.constant = 0
+                self.view.layoutIfNeeded()
+            };
+        }
+    }
 }

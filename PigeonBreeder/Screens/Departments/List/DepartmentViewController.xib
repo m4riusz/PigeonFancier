@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DepartmentViewController" customModule="PigeonBreeder" customModuleProvider="target">
             <connections>
+                <outlet property="bottomConstraint" destination="jm4-ZY-sE0" id="3BZ-xV-FnL"/>
                 <outlet property="emptyMaskView" destination="4Vj-vR-vx8" id="v6O-Et-kav"/>
                 <outlet property="searchBar" destination="PZc-j0-om8" id="sFO-5e-se5"/>
                 <outlet property="tableView" destination="AhF-2X-DDf" id="YQm-iW-rA5"/>
@@ -23,10 +24,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" placeholder="Search" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZc-j0-om8">
+                <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZc-j0-om8">
                     <rect key="frame" x="0.0" y="305" width="375" height="56"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
                     <scopeButtonTitles>
                         <string>Title</string>
                         <string>Title</string>
