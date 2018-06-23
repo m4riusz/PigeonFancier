@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         aboutNavigationController.tabBarItem = UITabBarItem(title: LocalizableStrings.navAbout.localized, image: UIImage(named: "ic_info_outline"), selectedImage: UIImage(named: "ic_info"))
         
-        pigeonNavigationController.tabBarItem = UITabBarItem(title: LocalizableStrings.navPigeons.localized, image: UIImage(named: "ic_info_outline"), selectedImage: UIImage(named: "ic_info"))
+        pigeonNavigationController.tabBarItem = UITabBarItem(title: LocalizableStrings.navPigeons.localized, image: UIImage(named: "ic_pigeon"), selectedImage: UIImage(named: "ic_pigeon"))
         
-        departmentNavigationController.tabBarItem = UITabBarItem(title: LocalizableStrings.navDepartments.localized, image: UIImage(named: "ic_info_outline"), selectedImage: UIImage(named: "ic_info"))
+        departmentNavigationController.tabBarItem = UITabBarItem(title: LocalizableStrings.navDepartments.localized, image: UIImage(named: "ic_department"), selectedImage: UIImage(named: "ic_department"))
         
         rootController.setViewControllers([pigeonNavigationController, departmentNavigationController, aboutNavigationController], animated: true)
         window?.rootViewController = rootController

@@ -20,6 +20,7 @@ class DepartmentViewController: BaseDepartmentViewController {
         departmentPresenter = DepartmentPresenter(withDepartmentView: self as IDepartmentView, withDepartmentService: DepartmentService())
     }
     
+    
     override func loadScreenData() {
         departmentPresenter?.onGetDistrictsWithDepartments()
     }

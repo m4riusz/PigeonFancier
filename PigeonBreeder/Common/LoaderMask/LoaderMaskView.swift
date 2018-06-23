@@ -21,7 +21,7 @@ class LoaderMaskView: NibView {
         super.commonInit()
         titleLabel.labelStyle = .bodyBold(16.0, 5.0)
         descriptionLabel.labelStyle = .capition(14.0, 5.0)
-        tryAgainButton.buttonStyle = .orangeLink
+        tryAgainButton.buttonStyle = .actionLink
         activityIndicator.type = .ballRotateChase
     }
     

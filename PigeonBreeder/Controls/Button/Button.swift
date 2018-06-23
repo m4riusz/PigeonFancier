@@ -6,6 +6,9 @@ enum ButtonStyle: Int {
     case orangeLink
     case orangeFlat
     case orangeRised
+    case actionLink
+    case actionFlat
+    case actionRised
 }
 
 @IBDesignable
@@ -62,6 +65,21 @@ class Button: UIButton {
             highlited = Config.Color.orangeDark
             disabled = Config.Color.gray
             break
+        case .actionLink:
+            normal = UIColor.clear
+            highlited = UIColor.clear
+            disabled = UIColor.clear
+            break
+        case .actionFlat:
+            normal = UIColor.clear
+            highlited = Config.Color.blue
+            disabled = Config.Color.gray
+            break
+        case .actionRised:
+            normal = Config.Color.blue
+            highlited = Config.Color.blueDark
+            disabled = Config.Color.gray
+            break
         default:
             normal = UIColor.clear
             highlited = UIColor.clear
@@ -86,6 +104,21 @@ class Button: UIButton {
             disabled = Config.Color.white
             break
         case .orangeRised:
+            normal = Config.Color.white
+            highlited = Config.Color.white
+            disabled =  Config.Color.white
+            break
+        case .actionLink:
+            normal = Config.Color.blue
+            highlited = Config.Color.blueDark
+            disabled = Config.Color.gray
+            break
+        case .actionFlat:
+            normal = Config.Color.blue
+            highlited = Config.Color.white
+            disabled = Config.Color.white
+            break
+        case .actionRised:
             normal = Config.Color.white
             highlited = Config.Color.white
             disabled =  Config.Color.white
