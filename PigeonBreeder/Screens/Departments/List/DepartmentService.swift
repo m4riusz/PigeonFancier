@@ -1,4 +1,4 @@
-
+import Foundation
 
 class DepartmentService: IDepartmentService {
     
@@ -42,7 +42,11 @@ class DepartmentService: IDepartmentService {
                 Department(favourite: false, evidenceNumber: "017", name: "Biała Podlaska", owner: Person(firstName: "Janusz", lastName: "Piechociński", phoneNumber: ["111-111-111"], email: ["email@email.pl"]), address: Address(street: "ul Jana Pawła 2", city: "Opoczno", postalCode: "91-300"))
                 ])
         ]
-        successCallback(distincts)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            successCallback(distincts)
+        }
+ 
     }
     
 }

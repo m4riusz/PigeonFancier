@@ -11,7 +11,13 @@
 
 // GENERAL
 "empty_string" = "";
-"try_again_later" = "Something went wrong. Try again later";
+"error" = "Error";
+"try_again_later" = "Something went wrong. Please try again later";
 "search" = "Search";
 "cancel" = "Cancel";
+
+// LOADER
+"data_download_title" = "Downloading data";
+"data_download_description" = "Please wait a moment";
+"data_download_try_again" = "REFRESH";
 

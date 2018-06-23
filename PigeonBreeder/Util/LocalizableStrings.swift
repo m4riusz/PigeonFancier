@@ -16,6 +16,13 @@ enum LocalizableStrings: String {
     case tryAgainLater = "try_again_later"
     case search = "search"
     case cancel = "cancel"
+    case error = "error"
+    
+    // LOADER
+    case dataDownloadTitle = "data_download_title";
+    case dataDownloadDescription = "data_download_description";
+    case dataDownloadTryAgain = "data_download_try_again";
+
     
     var localized: String {
         return self.rawValue.localized()

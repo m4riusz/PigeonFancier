@@ -8,6 +8,7 @@ struct Config {
         static let white = UIColor.white
         static let black = UIColor.black
         static let warning = UIColor.yellow
+        static let error = UIColor.red
         static let gray = UIColor.gray
     }
     

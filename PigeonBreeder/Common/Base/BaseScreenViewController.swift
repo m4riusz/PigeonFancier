@@ -3,11 +3,21 @@ import UIKit
 class BaseScreenViewController: UIViewController {
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint?
+    @IBOutlet weak var viewContainer: UIView?
+    
+    let loaderScreen: LoaderMaskView = LoaderMaskView()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         self.title = getTitle()
         loadScreenData();
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if let containerFrame: CGRect = viewContainer?.frame {
+            loaderScreen.frame = CGRect(x: 0, y: 0, width: containerFrame.width, height: containerFrame.height)
+        }
     }
     
     func loadScreenData() -> Void {
@@ -16,6 +26,22 @@ class BaseScreenViewController: UIViewController {
     
     func getTitle() -> String? {
         return ""
+    }
+    
+    
+}
+
+extension BaseScreenViewController: LoaderMaskViewProtocol {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewContainer?.addSubview(loaderScreen)
+        loaderScreen.delegate = self
+        loaderScreen.hide()
+    }
+    
+    func onRefresh() {
+        loadScreenData()
     }
     
 }

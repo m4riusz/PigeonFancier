@@ -12,9 +12,19 @@ enum ButtonStyle: Int {
 class Button: UIButton {
     
     private var backgroundColors: [UIColor] = [UIColor.clear, UIColor.clear, UIColor.clear]
+    
     var buttonStyle: ButtonStyle = .none {
         didSet {
             setupWithStyle(buttonStyle)
+        }
+    }
+    
+    var title: String? {
+        didSet {
+            setTitle(title, for: .normal)
+            setTitle(title, for: .selected)
+            setTitle(title, for: .highlighted)
+            updateState()
         }
     }
     

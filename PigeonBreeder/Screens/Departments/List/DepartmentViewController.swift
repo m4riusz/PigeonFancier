@@ -28,12 +28,11 @@ class DepartmentViewController: BaseDepartmentViewController {
 extension DepartmentViewController: IDepartmentView {
     
     func onLoadingData() -> Void {
-        self.emptyMaskView.isHidden = true
-        //TODO:
+       loaderScreen.show()
     }
     
     func onLoadingDataFinished() -> Void {
-        //TODO:
+        loaderScreen.hide()
     }
     
     func onDistrictsLoaded(_ districts: [District]) -> Void {

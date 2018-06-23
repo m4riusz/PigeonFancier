@@ -11,6 +11,12 @@
 
 // GENERAL
 "empty_string" = "";
+"error" = "Błąd";
 "try_again_later" = "Coś poszło nie tak, spróbuj ponownie później";
 "search" = "Szukaj";
 "cancel" = "Anuluj";
+
+// LOADER
+"data_download_title" = "Trwa pobieranie danych";
+"data_download_description" = "Proszę chwilkę poczekać";
+"data_download_try_again" = "ODŚWIEŻ";
