@@ -5,12 +5,20 @@ class BaseScreenViewController: UIViewController {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint?
     @IBOutlet weak var viewContainer: UIView?
     
+    private let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(onScreenTaped))
     let loaderScreen: LoaderMaskView = LoaderMaskView()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
+        tapRecognizer.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tapRecognizer)
         self.title = getTitle()
         loadScreenData();
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.view.removeGestureRecognizer(tapRecognizer)
     }
     
     override func viewDidLayoutSubviews() {
@@ -28,8 +36,13 @@ class BaseScreenViewController: UIViewController {
         return ""
     }
     
+    @objc func onScreenTaped() -> Void {
+        self.view.endEditing(true)
+        self.navigationItem.titleView?.endEditing(true)
+    }
     
 }
+
 
 extension BaseScreenViewController: LoaderMaskViewProtocol {
     
