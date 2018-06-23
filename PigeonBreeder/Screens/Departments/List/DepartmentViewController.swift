@@ -20,6 +20,10 @@ class DepartmentViewController: BaseDepartmentViewController {
         departmentPresenter = DepartmentPresenter(withDepartmentView: self as IDepartmentView, withDepartmentService: DepartmentService())
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        departmentPresenter?.onCleanSearchField()
+    }
     
     override func loadScreenData() {
         departmentPresenter?.onGetDistrictsWithDepartments()
@@ -46,7 +50,7 @@ extension DepartmentViewController: IDepartmentView {
     }
     
     func onDistrictsFailed() -> Void {
-        //TODO:
+        loaderScreen.error()
     }
     
     func onDistrictFilterResult(districts: [District]) -> Void {
