@@ -29,6 +29,9 @@
 		6FCD983320D9818800AA8E9C /* UISearchBar+Cancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCD983220D9818800AA8E9C /* UISearchBar+Cancel.swift */; };
 		6FCD983820D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCD983620D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.swift */; };
 		6FCD983920D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FCD983720D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.xib */; };
+		6FDD6E7820DFC69200A4C534 /* DepartmentDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDD6E7720DFC69200A4C534 /* DepartmentDetailPresenter.swift */; };
+		6FDD6E7B20DFCDA400A4C534 /* DepartmentDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDD6E7920DFCDA400A4C534 /* DepartmentDetailTableViewCell.swift */; };
+		6FDD6E7C20DFCDA400A4C534 /* DepartmentDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FDD6E7A20DFCDA400A4C534 /* DepartmentDetailTableViewCell.xib */; };
 		6FEBFCBE20DD86800084900D /* LoaderMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEBFCBC20DD86800084900D /* LoaderMaskView.swift */; };
 		6FEBFCBF20DD86800084900D /* LoaderMaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBFCBD20DD86800084900D /* LoaderMaskView.xib */; };
 		6FF9159320D04723000F2D40 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF9159220D04723000F2D40 /* Label.swift */; };
@@ -53,7 +56,6 @@
 		6FF915D320D05042000F2D40 /* PigeonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF915D120D05042000F2D40 /* PigeonViewController.xib */; };
 		6FFCC9EC20DC234700A1E924 /* DepartmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFCC9EB20DC234700A1E924 /* DepartmentService.swift */; };
 		6FFCC9EF20DC238500A1E924 /* DepartmentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFCC9EE20DC238500A1E924 /* DepartmentPresenter.swift */; };
-		6FFCC9F120DC23AF00A1E924 /* DepartmentContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFCC9F020DC23AF00A1E924 /* DepartmentContract.swift */; };
 		7AF63A0B96EF2927F8C3DA75 /* Pods_PigeonBreeder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CD384C8D1B7DE5F1502821 /* Pods_PigeonBreeder.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,9 @@
 		6FCD983220D9818800AA8E9C /* UISearchBar+Cancel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Cancel.swift"; sourceTree = "<group>"; };
 		6FCD983620D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentDetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		6FCD983720D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentDetailHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		6FDD6E7720DFC69200A4C534 /* DepartmentDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentDetailPresenter.swift; sourceTree = "<group>"; };
+		6FDD6E7920DFCDA400A4C534 /* DepartmentDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentDetailTableViewCell.swift; sourceTree = "<group>"; };
+		6FDD6E7A20DFCDA400A4C534 /* DepartmentDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentDetailTableViewCell.xib; sourceTree = "<group>"; };
 		6FEBFCBC20DD86800084900D /* LoaderMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderMaskView.swift; sourceTree = "<group>"; };
 		6FEBFCBD20DD86800084900D /* LoaderMaskView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderMaskView.xib; sourceTree = "<group>"; };
 		6FF9159220D04723000F2D40 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -110,7 +115,6 @@
 		6FF915D120D05042000F2D40 /* PigeonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PigeonViewController.xib; sourceTree = "<group>"; };
 		6FFCC9EB20DC234700A1E924 /* DepartmentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentService.swift; sourceTree = "<group>"; };
 		6FFCC9EE20DC238500A1E924 /* DepartmentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentPresenter.swift; sourceTree = "<group>"; };
-		6FFCC9F020DC23AF00A1E924 /* DepartmentContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentContract.swift; sourceTree = "<group>"; };
 		777E3C4FDA84E6538CC28429 /* Pods-PigeonBreeder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PigeonBreeder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PigeonBreeder/Pods-PigeonBreeder.debug.xcconfig"; sourceTree = "<group>"; };
 		E3CD384C8D1B7DE5F1502821 /* Pods_PigeonBreeder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PigeonBreeder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -133,6 +137,7 @@
 				6FCD983520D9880B00AA8E9C /* Controls */,
 				6F0C226720D440C5009CA95D /* DepartmentDetailViewController.swift */,
 				6F0C226820D440C5009CA95D /* DepartmentDetailViewController.xib */,
+				6FDD6E7720DFC69200A4C534 /* DepartmentDetailPresenter.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -220,6 +225,8 @@
 		6FCD983520D9880B00AA8E9C /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				6FDD6E7920DFCDA400A4C534 /* DepartmentDetailTableViewCell.swift */,
+				6FDD6E7A20DFCDA400A4C534 /* DepartmentDetailTableViewCell.xib */,
 				6FCD983620D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.swift */,
 				6FCD983720D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.xib */,
 			);
@@ -368,7 +375,6 @@
 				6FF915C720D04F6D000F2D40 /* DepartmentViewController.xib */,
 				6FFCC9EE20DC238500A1E924 /* DepartmentPresenter.swift */,
 				6FFCC9EB20DC234700A1E924 /* DepartmentService.swift */,
-				6FFCC9F020DC23AF00A1E924 /* DepartmentContract.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -479,6 +485,7 @@
 				6FF915D320D05042000F2D40 /* PigeonViewController.xib in Resources */,
 				6F0C226A20D440C5009CA95D /* DepartmentDetailViewController.xib in Resources */,
 				6FEBFCBF20DD86800084900D /* LoaderMaskView.xib in Resources */,
+				6FDD6E7C20DFCDA400A4C534 /* DepartmentDetailTableViewCell.xib in Resources */,
 				6F24760320D0419700C2B409 /* Main.storyboard in Resources */,
 				6FCD983920D9885D00AA8E9C /* DepartmentDetailHeaderTableViewCell.xib in Resources */,
 			);
@@ -532,7 +539,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FFCC9F120DC23AF00A1E924 /* DepartmentContract.swift in Sources */,
 				6FF915B920D04BD4000F2D40 /* BaseAboutViewController.swift in Sources */,
 				6FF915B620D04B6F000F2D40 /* BaseAboutNavigationViewController.swift in Sources */,
 				6FF915C320D04D12000F2D40 /* AboutViewController.swift in Sources */,
@@ -549,10 +555,12 @@
 				6FF915A420D04875000F2D40 /* UIColor+RGB.swift in Sources */,
 				6FF915CE20D05017000F2D40 /* BasePigeonNavigationViewController.swift in Sources */,
 				6F0C226920D440C5009CA95D /* DepartmentDetailViewController.swift in Sources */,
+				6FDD6E7B20DFCDA400A4C534 /* DepartmentDetailTableViewCell.swift in Sources */,
 				6FF915CC20D04FD8000F2D40 /* BasePigeonViewController.swift in Sources */,
 				6FF915A820D04A31000F2D40 /* MainTabBarViewController.swift in Sources */,
 				6FFCC9EF20DC238500A1E924 /* DepartmentPresenter.swift in Sources */,
 				6FC28C8C20D17FC5004A81F8 /* DepartmentTableViewCell.swift in Sources */,
+				6FDD6E7820DFC69200A4C534 /* DepartmentDetailPresenter.swift in Sources */,
 				6FC28C8F20D18388004A81F8 /* DataSourceProtocol.swift in Sources */,
 				6FF9159320D04723000F2D40 /* Label.swift in Sources */,
 				6FF915B020D04AD6000F2D40 /* BaseScreenViewController.swift in Sources */,

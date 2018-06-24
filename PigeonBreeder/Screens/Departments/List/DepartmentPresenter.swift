@@ -1,4 +1,12 @@
 
+protocol IDepartmentPresenter {
+    
+    func onFilterDistinctsByText(_ text: String) -> Void
+    func onCleanSearchField() -> Void
+    func onGetDistrictsWithDepartments() -> Void
+    
+}
+
 class DepartmentPresenter: IDepartmentPresenter {
     
     let departmentView: IDepartmentView

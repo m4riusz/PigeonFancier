@@ -1,5 +1,19 @@
 import UIKit
 
+protocol IDepartmentView {
+    
+    func onLoadingData() -> Void
+    func onLoadingDataFinished() -> Void
+    func onDistrictsLoaded(_ districts: [District]) -> Void
+    func onDistrictsFailed() -> Void
+    func onDistrictFilterResult(districts: [District]) -> Void
+    func onRefreshView() -> Void
+    func onHideKeyboard() -> Void
+    func onCleanSearchBar() -> Void
+    
+}
+
+
 class DepartmentViewController: BaseDepartmentViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -103,5 +117,16 @@ extension DepartmentViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return filteredDistricts[section].name
+    }
+}
+
+extension DepartmentViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedDepartment: Department = filteredDistricts[indexPath.section].departments[indexPath.row]
+        
+        let nextScreen: DepartmentDetailViewController = DepartmentDetailViewController()
+        nextScreen.departmentNumber = selectedDepartment.evidenceNumber
+        self.navigationController?.pushViewController(nextScreen, animated: true)
     }
 }

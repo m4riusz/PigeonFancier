@@ -4,6 +4,12 @@
 "departments_not_found" = "Departments not found";
 "departments_not_found_filter" = "Did not found mathing departmetns";
 
+// DEPARTMENTS DETAILS
+"personal_data" = "Personal informations";
+"address" = "Address";
+"phone" = "Phone";
+"email" = "E-mail";
+
 // BOTTOM BAR
 "nav_pigeons" = "Pigeons";
 "nav_departments" = "Departments";

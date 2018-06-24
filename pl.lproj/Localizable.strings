@@ -4,6 +4,12 @@
 "departments_not_found" = "Nie znaleziono oddziałów";
 "departments_not_found_filter" = "Nie znaleziono oddziałów, które pasowały by do podanej frazy";
 
+// DEPARTMENTS DETAILS
+"personal_data" = "Dane osobowe";
+"address" = "Adres";
+"phone" = "Telefon";
+"email" = "E-mail";
+
 // BOTTOM BAR
 "nav_pigeons" = "Gołębie";
 "nav_departments" = "Oddziały";
