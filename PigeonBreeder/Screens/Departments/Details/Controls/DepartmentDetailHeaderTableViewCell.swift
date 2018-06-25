@@ -1,10 +1,17 @@
 import UIKit
 
+struct DepartmentDetailHeaderTableViewCellData {
+    let evidenceNumber: String
+    let departmentName: String
+    var favourite: Bool
+}
+
 class DepartmentDetailHeaderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var evidenceNumberLabel: Label!
     @IBOutlet weak var departmentNameLabel: Label!
     @IBOutlet weak var favouriteButton: Button!
+    var data: DepartmentDetailHeaderTableViewCellData?;
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,9 +27,10 @@ class DepartmentDetailHeaderTableViewCell: UITableViewCell {
 extension DepartmentDetailHeaderTableViewCell: DataSourceLoading {
     
     func loadFromData(_ data: Any) {
-        if let castedData = data as? [String : String] {
-            evidenceNumberLabel.text = castedData["EvidenceNumber"]
-            departmentNameLabel.text = castedData["Name"]
+        if let castedData = data as? DepartmentDetailHeaderTableViewCellData {
+            self.data = castedData
+            evidenceNumberLabel.text = self.data?.evidenceNumber
+            departmentNameLabel.text = self.data?.departmentName
         }
     }
 }

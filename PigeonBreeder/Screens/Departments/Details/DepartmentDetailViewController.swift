@@ -3,15 +3,9 @@ import UIKit
 struct DepartmentCellData {
     let title: String?
     let className: String
-    let data: [[String: Any]]
+    let data: [Any]
 }
 
-enum CellType: String {
-    case none = ""
-    case map = "ic_gps"
-    case phone = "ic_phone"
-    case email = "ic_email"
-}
 
 protocol IDepartmentDetailView {
     
@@ -60,10 +54,11 @@ extension DepartmentDetailViewController: IDepartmentDetailView {
         data.append(DepartmentCellData(title: nil,
                                        className: DepartmentDetailHeaderTableViewCell.className,
                                        data: [
-                                        ["EvidenceNumber" : department.evidenceNumber,
-                                         "Name" : department.name,
-                                         "Favourite" : department.favourite]
-            ])
+                                        DepartmentDetailHeaderTableViewCellData(
+                                            evidenceNumber: department.evidenceNumber,
+                                            departmentName: department.name,
+                                            favourite: department.favourite)
+                                        ])
         )
         
         if let person = department.owner {
@@ -72,8 +67,8 @@ extension DepartmentDetailViewController: IDepartmentDetailView {
                 data.append(DepartmentCellData(title: LocalizableStrings.personalData.localized,
                                                className: DepartmentDetailTableViewCell.className,
                                                data: [
-                                                ["title" : fullName, "icon" : CellType.none]
-                    ])
+                                                DepartmentDetailTableViewCellData(title: fullName, type: .none)
+                                                ])
                 )
             }
         }
@@ -83,14 +78,14 @@ extension DepartmentDetailViewController: IDepartmentDetailView {
                 data.append(DepartmentCellData(title: LocalizableStrings.address.localized,
                                                className: DepartmentDetailTableViewCell.className,
                                                data: [
-                                                ["title" : items.joined(separator: " "), "icon" : CellType.map]
-                    ])
+                                                DepartmentDetailTableViewCellData(title: items.joined(separator: " "), type: .map)
+                                                ])
                 )
             }
         }
         
         if let phones = department.owner?.phoneNumber {
-            let items = phones.map{["title" : $0, "icon" : CellType.phone]}
+            let items = phones.map{ DepartmentDetailTableViewCellData(title: $0, type: .phone)}
             if items.count > 0 {
                 data.append(DepartmentCellData(title: LocalizableStrings.phone.localized,
                                                className: DepartmentDetailTableViewCell.className,
@@ -100,7 +95,7 @@ extension DepartmentDetailViewController: IDepartmentDetailView {
         }
         
         if let emails = department.owner?.email {
-            let items = emails.map{["title" : $0, "icon" : CellType.email]}
+            let items = emails.map{ DepartmentDetailTableViewCellData(title: $0, type: .email)}
             if items.count > 0 {
                 data.append(DepartmentCellData(title: LocalizableStrings.email.localized,
                                                className: DepartmentDetailTableViewCell.className,
@@ -137,5 +132,33 @@ extension DepartmentDetailViewController: UITableViewDataSource {
             loadDataCell.loadFromData(data[indexPath.section].data[indexPath.row])
         }
         return cell
+    }
+}
+
+extension DepartmentDetailViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section != 0 else {
+            return
+        }
+        if let itemData: DepartmentDetailTableViewCellData = data[indexPath.section].data[indexPath.row] as? DepartmentDetailTableViewCellData {
+            switch itemData.type {
+            case .email:
+                AppHelper.mailTo(itemData.title)
+                break
+            case .phone:
+                AppHelper.callNumber(itemData.title)
+                break
+            case .map:
+                AppHelper.navigateToAddress(itemData.title)
+                break
+            default:
+                return
+            }
+        }
+        
+        
+        
+        
     }
 }
