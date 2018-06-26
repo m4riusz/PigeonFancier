@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PigeonBreeder/Controls/Label/Label.swift"
-            timestampString = "551552147.786096"
+            timestampString = "551733810.792861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PigeonBreeder/Controls/Label/Label.swift"
-            timestampString = "551552147.786225"
+            timestampString = "551733810.792927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -345,22 +345,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PigeonBreeder/Screens/About/StartScreen/AboutViewController.swift"
-            timestampString = "551458388.054785"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "7"
-            endingLineNumber = "7"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "PigeonBreeder/Screens/Pigeons/StartScreen/PigeonViewController.swift"
             timestampString = "551458388.054839"
             startingColumnNumber = "9223372036854775807"
@@ -474,7 +458,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PigeonBreeder/Screens/Departments/Details/Controls/DepartmentDetailTableViewCell.swift"
-            timestampString = "551646668.299917"
+            timestampString = "551729251.481267"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"

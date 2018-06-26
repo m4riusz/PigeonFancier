@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PigeonViewController" customModule="PigeonBreeder" customModuleProvider="target">
             <connections>
                 <outlet property="bottomConstraint" destination="wkN-dL-TZ4" id="Xss-lu-SeY"/>
+                <outlet property="emptyMask" destination="3uN-qm-PbC" id="Y8C-xl-eFV"/>
+                <outlet property="tableView" destination="4xX-pV-Gg3" id="RJI-g0-hLw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewContainer" destination="TZI-ZJ-R3g" id="c66-0Y-5Q4"/>
             </connections>
@@ -24,7 +26,30 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-ZJ-R3g">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4xX-pV-Gg3">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="SYd-pe-5KS"/>
+                            </connections>
+                        </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3uN-qm-PbC" customClass="EmptyMaskView" customModule="PigeonBreeder" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="4xX-pV-Gg3" secondAttribute="bottom" id="8yJ-Gz-eRG"/>
+                        <constraint firstItem="3uN-qm-PbC" firstAttribute="leading" secondItem="TZI-ZJ-R3g" secondAttribute="leading" id="Aqn-Ry-1u3"/>
+                        <constraint firstAttribute="trailing" secondItem="4xX-pV-Gg3" secondAttribute="trailing" id="ChX-eu-dy0"/>
+                        <constraint firstItem="4xX-pV-Gg3" firstAttribute="leading" secondItem="TZI-ZJ-R3g" secondAttribute="leading" id="Gh0-Lw-yZX"/>
+                        <constraint firstItem="4xX-pV-Gg3" firstAttribute="top" secondItem="TZI-ZJ-R3g" secondAttribute="top" id="J1a-Bh-HgE"/>
+                        <constraint firstItem="3uN-qm-PbC" firstAttribute="top" secondItem="TZI-ZJ-R3g" secondAttribute="top" id="WJX-zF-kd0"/>
+                        <constraint firstAttribute="trailing" secondItem="3uN-qm-PbC" secondAttribute="trailing" id="eMb-hI-hek"/>
+                        <constraint firstAttribute="bottom" secondItem="3uN-qm-PbC" secondAttribute="bottom" id="jP7-6w-AFE"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
