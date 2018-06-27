@@ -32,6 +32,7 @@ class DepartmentViewController: BaseDepartmentViewController {
         searchBar.placeholder = LocalizableStrings.search.localized
         self.navigationItem.titleView = searchBar
         departmentPresenter = DepartmentPresenter(withDepartmentView: self as IDepartmentView, withDepartmentService: DepartmentService())
+        registerForPreviewing(with: self, sourceView: tableView)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -42,6 +43,26 @@ class DepartmentViewController: BaseDepartmentViewController {
     override func loadScreenData() {
         departmentPresenter?.onGetDistrictsWithDepartments()
     }
+}
+
+extension DepartmentViewController: UIViewControllerPreviewingDelegate {
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        
+        guard let indexPath: IndexPath = tableView.indexPathForRow(at: location) else {
+            return nil;
+        }
+        let selectedDepartment: Department = filteredDistricts[indexPath.section].departments[indexPath.row]
+        
+        let nextScreen: DepartmentDetailViewController = DepartmentDetailViewController()
+        nextScreen.departmentNumber = selectedDepartment.evidenceNumber
+        return nextScreen
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        self.navigationController?.pushViewController(viewControllerToCommit, animated: true)
+    }
+    
 }
 
 extension DepartmentViewController: IDepartmentView {
