@@ -3,6 +3,7 @@ import UIKit
 class DepartmentTableViewCell: UITableViewCell, DataSourceLoading {
     @IBOutlet weak var departmentNumberLabel: Label!
     @IBOutlet weak var departmentNameLabel: Label!
+    var data: Department?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -15,6 +16,7 @@ class DepartmentTableViewCell: UITableViewCell, DataSourceLoading {
             return
         }
         let department = data as! Department
+        self.data = department
         departmentNumberLabel.text = department.evidenceNumber
         departmentNameLabel.text = department.name
     }

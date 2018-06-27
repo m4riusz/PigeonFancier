@@ -68,7 +68,7 @@ extension DepartmentViewController: UIViewControllerPreviewingDelegate {
 extension DepartmentViewController: IDepartmentView {
     
     func onLoadingData() -> Void {
-       loaderScreen.show()
+        loaderScreen.show()
     }
     
     func onLoadingDataFinished() -> Void {
@@ -144,10 +144,11 @@ extension DepartmentViewController: UITableViewDataSource {
 extension DepartmentViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedDepartment: Department = filteredDistricts[indexPath.section].departments[indexPath.row]
-        
-        let nextScreen: DepartmentDetailViewController = DepartmentDetailViewController()
-        nextScreen.departmentNumber = selectedDepartment.evidenceNumber
-        self.navigationController?.pushViewController(nextScreen, animated: true)
+        if let cell: DepartmentTableViewCell = tableView.cellForRow(at: indexPath) as? DepartmentTableViewCell {
+            let nextScreen: DepartmentDetailViewController = DepartmentDetailViewController()
+            nextScreen.departmentNumber = cell.data?.evidenceNumber
+            self.navigationController?.pushViewController(nextScreen, animated: true)
+        }
     }
+
 }

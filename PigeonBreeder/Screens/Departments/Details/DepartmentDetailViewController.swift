@@ -141,16 +141,18 @@ extension DepartmentDetailViewController: UITableViewDelegate {
         guard indexPath.section != 0 else {
             return
         }
-        if let itemData: DepartmentDetailTableViewCellData = data[indexPath.section].data[indexPath.row] as? DepartmentDetailTableViewCellData {
-            switch itemData.type {
+        if let cellSelected: DepartmentDetailTableViewCell = tableView.cellForRow(at: indexPath) as? DepartmentDetailTableViewCell,
+            let type: DepartmentDetailTableViewCellType = cellSelected.data?.type,
+            let value: String = cellSelected.data?.title {
+            switch type {
             case .email:
-                AppHelper.mailTo(itemData.title)
+                AppHelper.mailTo(value)
                 break
             case .phone:
-                AppHelper.callNumber(itemData.title)
+                AppHelper.callNumber(value)
                 break
             case .map:
-                AppHelper.navigateToAddress(itemData.title)
+                AppHelper.navigateToAddress(value)
                 break
             default:
                 return

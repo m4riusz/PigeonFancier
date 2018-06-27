@@ -15,7 +15,7 @@ struct DepartmentDetailTableViewCellData {
 class DepartmentDetailTableViewCell: UITableViewCell {
 
     @IBOutlet weak var title: Label!
-    private var data: DepartmentDetailTableViewCellData?
+    var data: DepartmentDetailTableViewCellData?
     
     override func awakeFromNib() {
         super.awakeFromNib()
